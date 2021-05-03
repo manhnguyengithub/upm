@@ -1,5 +1,78 @@
-a {
-  color: red; }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
 
-body {
-  margin: 0; }
+.full-width {
+  width: 100%; }
+
+.group-intro {
+  background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #F2F2F2;
+  background-size: 24px 24px;
+  padding: 115px 0 122px 0; }
+  .group-intro .news .box-news {
+    display: flex; }
+    .group-intro .news .box-news .item-news {
+      margin-left: 22px;
+      width: 100%;
+      height: 350px;
+      background: blue;
+      max-width: 33%;
+      position: relative;
+      text-align: center; }
+      .group-intro .news .box-news .item-news:first-child {
+        margin-left: 0; }
+      .group-intro .news .box-news .item-news img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .group-intro .news .box-news .item-news .box-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 50%;
+        background-color: transparent;
+        background-image: linear-gradient(transparent, #1A1A1A); }
+        .group-intro .news .box-news .item-news .box-text button {
+          min-width: 120px;
+          height: 25px;
+          border: 1px solid #F7931E;
+          border-radius: 13px;
+          background: transparent;
+          color: #F7931E;
+          text-align: center;
+          position: absolute;
+          bottom: 19px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          text-transform: uppercase; }
+        .group-intro .news .box-news .item-news .box-text h3 {
+          position: absolute;
+          color: #fff;
+          bottom: 58px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          text-transform: uppercase; }
+  .group-intro .university {
+    padding-top: 80px; }
+  .group-intro .stories .section-title {
+    text-align: center; }
+    .group-intro .stories .section-title p {
+      position: relative;
+      display: inline-block; }
+      .group-intro .stories .section-title p .title-img img {
+        width: 25px;
+        height: 15px; }
+      .group-intro .stories .section-title p .title-text {
+        text-transform: uppercase;
+        color: #006837;
+        font-size: 32px;
+        font-weight: bold;
+        display: inline-block;
+        padding: 0px 28px; }
