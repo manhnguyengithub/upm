@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 14px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
@@ -20,7 +20,7 @@ $dot-color: #F2F2F2;
 $dot-size: 4px;
 $dot-space: 24px;
 
-.full-width{
+.full-width {
     width: 100%;
 }
 
@@ -29,6 +29,72 @@ body {
 }
 
 .banner {
+    position: relative;
+
+    .header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 80px;
+        background: rgba(0, 104, 55, .8);
+
+        .box-logo {
+            text-align: left;
+
+            a {
+                line-height: 80px;
+                display: inline-block;
+
+                img {
+                    max-width: 93px;
+                }
+            }
+        }
+
+        .box-menu {
+            ul{
+                text-align: right;
+                li{
+                    display: inline-block;
+                    line-height: 80px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-left: 27px;
+                    font-size: 14px;
+                    span{
+                        img{
+                            padding-left: 7px;
+                        }
+                    }
+                    &.active{
+                        color: $brand-color1;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-form{
+        position: absolute;
+        right: 0;
+        top: 80px;
+        bottom: 0;
+        width: 442px;
+        background: #005036;
+        border-top: 5px solid rgba(247, 147, 30, .5);
+        padding-top: 48px;
+        .title-form{
+            color: #fff;
+            text-align: center;
+            font-size: 31.5px;
+            font-weight: bold;
+        }
+        .sub-title-form{
+            color: #fff;
+        }
+    }
 
 }
 
@@ -107,19 +173,22 @@ body {
     }
 
     .stories {
-        .section-title{
+        .section-title {
             text-align: center;
-            p{
+
+            p {
                 position: relative;
                 display: inline-block;
-                .title-img{
-                    img{
+
+                .title-img {
+                    img {
                         width: 25px;
                         height: 15px;
 
                     }
                 }
-                .title-text{
+
+                .title-text {
                     text-transform: uppercase;
                     color: $brand-color2;
                     font-size: 32px;

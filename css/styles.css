@@ -2,12 +2,59 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 14px;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif; }
 
 .full-width {
   width: 100%; }
+
+.banner {
+  position: relative; }
+  .banner .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    background: rgba(0, 104, 55, 0.8); }
+    .banner .header .box-logo {
+      text-align: left; }
+      .banner .header .box-logo a {
+        line-height: 80px;
+        display: inline-block; }
+        .banner .header .box-logo a img {
+          max-width: 93px; }
+    .banner .header .box-menu ul {
+      text-align: right; }
+      .banner .header .box-menu ul li {
+        display: inline-block;
+        line-height: 80px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-left: 27px;
+        font-size: 14px; }
+        .banner .header .box-menu ul li span img {
+          padding-left: 7px; }
+        .banner .header .box-menu ul li.active {
+          color: #F7931E;
+          font-weight: bold; }
+  .banner .banner-form {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    bottom: 0;
+    width: 442px;
+    background: #005036;
+    border-top: 5px solid rgba(247, 147, 30, 0.5);
+    padding-top: 48px; }
+    .banner .banner-form .title-form {
+      color: #fff;
+      text-align: center;
+      font-size: 31.5px;
+      font-weight: bold; }
+    .banner .banner-form .sub-title-form {
+      color: #fff; }
 
 .group-intro {
   background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #F2F2F2;
