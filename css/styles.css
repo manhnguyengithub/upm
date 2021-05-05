@@ -47,14 +47,19 @@
     width: 442px;
     background: #005036;
     border-top: 5px solid rgba(247, 147, 30, 0.5);
-    padding-top: 48px; }
+    padding: 50px 30px; }
     .banner .banner-form .title-form {
       color: #fff;
       text-align: center;
       font-size: 31.5px;
       font-weight: bold; }
     .banner .banner-form .sub-title-form {
-      color: #fff; }
+      color: #fff;
+      font-family: Lato;
+      font-size: 16px;
+      height: 42px;
+      text-align: center;
+      padding-top: 6px; }
 
 .group-intro {
   background: linear-gradient(90deg, #fff 20px, transparent 1%) center, linear-gradient(#fff 20px, transparent 1%) center, #F2F2F2;

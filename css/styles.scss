@@ -53,21 +53,24 @@ body {
         }
 
         .box-menu {
-            ul{
+            ul {
                 text-align: right;
-                li{
+
+                li {
                     display: inline-block;
                     line-height: 80px;
                     color: #fff;
                     text-transform: uppercase;
                     margin-left: 27px;
                     font-size: 14px;
-                    span{
-                        img{
+
+                    span {
+                        img {
                             padding-left: 7px;
                         }
                     }
-                    &.active{
+
+                    &.active {
                         color: $brand-color1;
                         font-weight: bold;
                     }
@@ -76,7 +79,7 @@ body {
         }
     }
 
-    .banner-form{
+    .banner-form {
         position: absolute;
         right: 0;
         top: 80px;
@@ -84,15 +87,22 @@ body {
         width: 442px;
         background: #005036;
         border-top: 5px solid rgba(247, 147, 30, .5);
-        padding-top: 48px;
-        .title-form{
+        padding: 50px 30px;
+
+        .title-form {
             color: #fff;
             text-align: center;
             font-size: 31.5px;
             font-weight: bold;
         }
-        .sub-title-form{
+
+        .sub-title-form {
             color: #fff;
+            font-family: Lato;
+            font-size: 16px;
+            height: 42px;
+            text-align: center;
+            padding-top: 6px;
         }
     }
 
@@ -197,6 +207,10 @@ body {
                     padding: 0px 28px;
                 }
             }
+        }
+
+        .section-content {
+
         }
     }
 }
