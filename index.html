@@ -21,7 +21,10 @@
 <body>
 <div class="banner">
 	<!--slide-->
-	<div id="demo" class="carousel slide" data-ride="carousel">
+	<div id="banner-slide" class="carousel slide" data-ride="carousel">
+		<div class="over-lay">
+
+		</div>
 		<ul class="carousel-indicators">
 			<li data-target="#demo" data-slide-to="0" class="active"></li>
 			<li data-target="#demo" data-slide-to="1"></li>
@@ -38,13 +41,18 @@
 				<img class="full-width " src="assets/img/banner-bg.png" alt="">
 			</div>
 		</div>
-		<a class="carousel-control-prev" href="#demo" data-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
+		<a class="carousel-control-prev" href="#banner-slide" data-slide="prev">
+			<span class="">
+				<img src="assets/img/slide-left.png" alt="">
+			</span>
 		</a>
-		<a class="carousel-control-next" href="#demo" data-slide="next">
-			<span class="carousel-control-next-icon"></span>
+		<a class="carousel-control-next" href="#banner-slide" data-slide="next">
+			<span class="">
+				<img src="assets/img/slide-right.png" alt="">
+			</span>
 		</a>
 	</div>
+
 	<!--header-->
 	<div class="header">
 		<div class="container">
@@ -80,12 +88,34 @@
 		</div>
 	</div>
 	<div class="banner-form">
-		<h2 class="title-form">DISCOVER<br/>
-			THE TOP UNIVERSITIES
-		</h2>
-		<p class="sub-title-form">Let's get started</p>
-		<div class="box-tab">
-
+		<div>
+			<h2 class="title-form">DISCOVER<br/>
+				THE TOP UNIVERSITIES
+			</h2>
+			<p class="sub-title-form">Let's get started</p>
+			<div class="box-tab">
+				<div class="item-tab active">
+					<h3>Universities</h3>
+				</div>
+				<div class="item-tab">
+					<h3>programs</h3>
+				</div>
+			</div>
+			<div class="box-content-tab active">
+				<div class="item-content active">
+					<input type="text" placeholder="University name"/>
+				</div>
+				<!--Thêm class 'active để hiện ra'-->
+				<div class="item-content">
+					<input type="text" placeholder="Program name"/>
+				</div>
+			</div>
+			<div class="text-center">
+				<button class="search-form">
+					<img src="assets/img/icon-search.png" alt="">
+					search
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
