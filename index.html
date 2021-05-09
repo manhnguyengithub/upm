@@ -7,7 +7,6 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -26,9 +25,9 @@
 
 		</div>
 		<ul class="carousel-indicators">
-			<li data-target="#demo" data-slide-to="0" class="active"></li>
-			<li data-target="#demo" data-slide-to="1"></li>
-			<li data-target="#demo" data-slide-to="2"></li>
+			<li data-target="#banner-slide" data-slide-to="0" class="active"></li>
+			<li data-target="#banner-slide" data-slide-to="1"></li>
+			<li data-target="#banner-slide" data-slide-to="2"></li>
 		</ul>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
@@ -63,26 +62,53 @@
 					</a>
 				</div>
 				<div class="col-8 box-menu">
-					<ul>
-						<li class="active">Home</li>
-						<li>About
-							<span>
-								<img src="assets/img/arrow_down.png" alt="">
-							</span>
-						</li>
-						<li>Methodology
-							<span>
-								<img src="assets/img/arrow_down.png" alt="">
-							</span>
-						</li>
-						<li>Rating
-							<span>
-								<img src="assets/img/arrow_down.png" alt="">
-							</span>
-						</li>
-						<li>News</li>
-						<li>Contact</li>
-					</ul>
+<!--					<ul>-->
+<!--						<li class="active">Home</li>-->
+<!--						<li>About-->
+<!--							<span>-->
+<!--								<img src="assets/img/arrow_down.png" alt="">-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>Methodology-->
+<!--							<span>-->
+<!--								<img src="assets/img/arrow_down.png" alt="">-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>Rating-->
+<!--							<span>-->
+<!--								<img src="assets/img/arrow_down.png" alt="">-->
+<!--							</span>-->
+<!--						</li>-->
+<!--						<li>News</li>-->
+<!--						<li>Contact</li>-->
+<!--					</ul>-->
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Link</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Dropdown
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -177,22 +203,251 @@
 					</div>
 				</div>
 			</div>
-			<div class="row section-content">
-				<div class="col-md-6">
+			<!--			<div class="row section-content">-->
+			<!--				<div class="col-md-6">-->
+			<!--					<div class="row sub left">-->
+			<!--						<div class="col-md-6 sub">-->
+			<!--							<div class="box-item">-->
+			<!--								<img src="assets/img/story1.png" alt="">-->
+			<!--							</div>-->
+			<!--						</div>-->
+			<!--						<div class="col-md-6 sub">-->
+			<!--							<div class="box-item">-->
+			<!--								<img src="assets/img/story1.png" alt="">-->
+			<!--							</div>-->
+			<!--						</div>-->
+			<!--					</div>-->
+			<!--					<div class="row left sub row2">-->
+			<!--						<div class="col-md-6 sub">-->
+			<!--							<div class="box-item">-->
+			<!--								<img src="assets/img/story1.png" alt="">-->
+			<!--							</div>-->
+			<!--						</div>-->
+			<!--						<div class="col-md-6 sub">-->
+			<!--							<div class="box-item">-->
+			<!--								<img src="assets/img/story1.png" alt="">-->
+			<!--							</div>-->
+			<!--						</div>-->
+			<!--					</div>-->
 
+			<!--				</div>-->
+			<!--				<div class="col-md-6">-->
+			<!--					<div class="row sub right">-->
+			<!--						<div class="col-12 sub">-->
+			<!--							<div class="box-item item-master">-->
+			<!--								<img src="assets/img/story1.png" alt="">-->
+			<!--							</div>-->
+			<!--						</div>-->
+			<!--					</div>-->
+			<!--				</div>-->
+			<!--			</div>-->
+			<div class="box-master">
+				<div class="group group-child">
+					<div class="row-child">
+						<div class="item-child">
+							<p class="story-title">University ranking</p>
+							<img src="assets/img/story1.png" alt="">
+						</div>
+						<div class="item-child">
+							<p class="story-title">University ranking</p>
+							<img src="assets/img/story3.png" alt="">
+						</div>
+					</div>
+
+					<div class="row-child">
+						<div class="item-child">
+							<p class="story-title">University ranking</p>
+							<img src="assets/img/story2.png" alt="">
+						</div>
+						<div class="item-child">
+							<p class="story-title">University ranking</p>
+							<img src="assets/img/story4.png" alt="">
+						</div>
+					</div>
 				</div>
-				<div class="col-md-6">
-
+				<div class="group group-master">
+					<div class="item-child">
+						<div class="box-des">
+							<p class="title-des">UNIVERSITY RANKING</p>
+							<div class="line-des"></div>
+							<p class="content-des">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+								tincidunt
+							</p>
+						</div>
+						<img src="assets/img/story5.png" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="footer-menu">
-
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 box-menu">
+				<ul>
+					<li class="active">Home</li>
+					<li>About
+						<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="8.238" height="4.061"
+									 viewBox="0 0 8.238 4.061">
+								  <path id="Path_863" data-name="Path 863" d="M922.047,1928.64l-3.808,3.03-3.808-3.03"
+										transform="translate(-914.12 -1928.249)" fill="none" stroke="gray"
+										stroke-miterlimit="10" stroke-width="1"/>
+								</svg>
+						</span>
+					</li>
+					<li>Methodology
+						<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="8.238" height="4.061"
+									 viewBox="0 0 8.238 4.061">
+								  <path id="Path_863" data-name="Path 863" d="M922.047,1928.64l-3.808,3.03-3.808-3.03"
+										transform="translate(-914.12 -1928.249)" fill="none" stroke="gray"
+										stroke-miterlimit="10" stroke-width="1"/>
+								</svg>
+						</span>
+					</li>
+					<li>Rating
+						<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="8.238" height="4.061"
+									 viewBox="0 0 8.238 4.061">
+								  <path id="Path_863" data-name="Path 863" d="M922.047,1928.64l-3.808,3.03-3.808-3.03"
+										transform="translate(-914.12 -1928.249)" fill="none" stroke="gray"
+										stroke-miterlimit="10" stroke-width="1"/>
+								</svg>
+						</span>
+					</li>
+					<li>News</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="footer">
-
+	<!--background footer-->
+	<img class="footer-bg" src="assets/img/bg-footer.png" alt="">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-12">
+				<a href="">
+					<img src="assets/img/logo-footer.png" alt="">
+				</a>
+			</div>
+			<div class="col-md-4 col-12">
+				<p class="footer-title">Contact us </p>
+				<div class="footer-line"></div>
+				<p class="footer-content">
+					<svg xmlns="http://www.w3.org/2000/svg" width="10.611" height="14.137" viewBox="0 0 10.611 14.137">
+						<path id="Path_829" data-name="Path 829"
+							  d="M505.958,2110.931a5.3,5.3,0,0,0-.294,6.767q2.064,2.755,4.132,5.509c.029.038.061.075.1.118.031-.039.055-.067.076-.1q2.084-2.777,4.164-5.554a5.2,5.2,0,0,0,1.007-3.942,5.292,5.292,0,0,0-4.04-4.408c-.244-.055-.493-.092-.74-.137h-.938a.428.428,0,0,1-.075.025A5.2,5.2,0,0,0,505.958,2110.931Zm4.011.029a3.53,3.53,0,1,1-3.609,3.544A3.532,3.532,0,0,1,509.969,2110.96Z"
+							  transform="translate(-504.584 -2109.188)" fill="#fff"/>
+					</svg>
+					<span>
+						Address: E3, University of Engineering and<br/>
+						Technology, Ha Noi
+					</span>
+				</p>
+				<p class="footer-content">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14.137" height="14.027" viewBox="0 0 14.137 14.027">
+						<g id="Group_457" data-name="Group 457" transform="translate(-502.821 -2155.996)">
+							<g id="Group_456" data-name="Group 456">
+								<path id="Path_830" data-name="Path 830"
+									  d="M503.339,2162.9a13.469,13.469,0,0,0,3.259,4.508,10.5,10.5,0,0,0,3.274,2.108,6.756,6.756,0,0,0,2.559.511,4.194,4.194,0,0,0,1.192-.184,2.19,2.19,0,0,0,1.663-2.413,1.781,1.781,0,0,0-.186-.747.678.678,0,0,0-.44-.354c-.125-.033-.248-.074-.372-.111-.729-.216-1.461-.428-2.188-.652a1.045,1.045,0,0,0-1.12.263c-.213.211-.422.427-.623.649-.166.185-.286.236-.511.131a2.6,2.6,0,0,1-.543-.323c-.253-.205-.488-.433-.724-.659a28.048,28.048,0,0,1-2.2-2.471,1.125,1.125,0,0,1-.147-.25.486.486,0,0,1,.057-.532,2.687,2.687,0,0,1,.291-.3c.126-.115.267-.213.392-.329a1.078,1.078,0,0,0,.363-.858,1.827,1.827,0,0,0-.052-.41c-.134-.517-.276-1.033-.42-1.548-.092-.325-.191-.648-.289-.972a.685.685,0,0,0-.518-.513,1.692,1.692,0,0,0-.243-.04,2.3,2.3,0,0,0-1.768.59,3.565,3.565,0,0,0-1.2,3.169A5.774,5.774,0,0,0,503.339,2162.9Z"
+									  fill="#fff"/>
+								<path id="Path_831" data-name="Path 831"
+									  d="M509.116,2156.994a7.173,7.173,0,0,1,1.608.1,6.319,6.319,0,0,1,5.244,6.026c.012.258,0,.518,0,.776a.434.434,0,0,0,.488.454.561.561,0,0,0,.5-.514c.009-.176,0-.353,0-.529a6.679,6.679,0,0,0-.125-1.438,7.04,7.04,0,0,0-2.422-4.173,7.375,7.375,0,0,0-5.263-1.688.535.535,0,0,0-.44.257.476.476,0,0,0-.032.518A.436.436,0,0,0,509.116,2156.994Z"
+									  fill="#fff"/>
+								<path id="Path_832" data-name="Path 832"
+									  d="M509.023,2159.136a4.835,4.835,0,0,1,1.358.112,4.395,4.395,0,0,1,3.433,3.981c.02.246.013.494.014.741a.43.43,0,0,0,.471.452.552.552,0,0,0,.516-.533,9.322,9.322,0,0,0-.034-1.03,5.106,5.106,0,0,0-1.1-2.707,5.251,5.251,0,0,0-4.168-2c-.156,0-.312-.011-.467,0a.53.53,0,0,0-.481.394A.437.437,0,0,0,509.023,2159.136Z"
+									  fill="#fff"/>
+								<path id="Path_833" data-name="Path 833"
+									  d="M508.93,2161.265a4.271,4.271,0,0,1,.44.012,2.536,2.536,0,0,1,2.222,1.818,3.019,3.019,0,0,1,.107.969.422.422,0,0,0,.412.449.555.555,0,0,0,.573-.508c.007-.094,0-.188,0-.282a3.358,3.358,0,0,0-.658-2.055,3.419,3.419,0,0,0-3.062-1.389.525.525,0,0,0-.47.337A.443.443,0,0,0,508.93,2161.265Z"
+									  fill="#fff"/>
+							</g>
+						</g>
+					</svg>
+					<span>0848,322,322</span>
+				</p>
+				<p class="footer-content">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14.137" height="9.416" viewBox="0 0 14.137 9.416">
+						<g id="Group_459" data-name="Group 459" transform="translate(-502.821 -2180.816)">
+							<g id="Group_458" data-name="Group 458">
+								<path id="Path_834" data-name="Path 834"
+									  d="M515.423,2180.817q-5.53,0-11.06,0a1.886,1.886,0,0,0-.488.052,1.414,1.414,0,0,0-1.043,1.468c0,2.082.021,4.163-.011,6.244a1.526,1.526,0,0,0,1.636,1.649c.226,0,.453-.009.679-.011.453-.006.907-.008,1.36-.009,1.133,0,2.266.009,3.4.009h2.758q1.38,0,2.758,0a1.42,1.42,0,0,0,1.545-1.535q0-3.161,0-6.322A1.419,1.419,0,0,0,515.423,2180.817Zm-.1.956c-1.163,1.165-2.284,2.288-3.406,3.41-.263.264-.52.535-.795.787a1.748,1.748,0,0,1-2.466-.016c-1.373-1.349-2.727-2.718-4.089-4.08a1.221,1.221,0,0,1-.08-.1Zm-11.523,6.761v-6.03l3.017,3.016Zm.768.727,3.031-3.031a2.844,2.844,0,0,0,4.6-.009l3.023,3.04Zm11.428-.715-3.015-3.028,3.015-3.036Z"
+									  fill="#fff"/>
+								<path id="Path_835" data-name="Path 835"
+									  d="M506.5,2190.211c1.133,0,2.266.009,3.4.009h0C508.762,2190.22,507.629,2190.21,506.5,2190.211Z"
+									  fill="#fff"/>
+								<path id="Path_836" data-name="Path 836"
+									  d="M506.5,2190.211c-.453,0-.907,0-1.36.009C505.589,2190.214,506.043,2190.212,506.5,2190.211Z"
+									  fill="#fff"/>
+							</g>
+						</g>
+					</svg>
+					<span>Email: upm@vnu.edu.vn</span>
+				</p>
+			</div>
+			<div class="col-md-4 col-12">
+				<p class="footer-title">Social network</p>
+				<div class="footer-line"></div>
+				<div class="box-social">
+					<a href="">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+							<g id="Group_453" data-name="Group 453" transform="translate(-879.667 -2094.413)">
+								<path id="Path_827" data-name="Path 827"
+									  d="M914.667,2111.913a17.5,17.5,0,1,0-20.235,17.288v-12.229h-4.443v-5.059h4.443v-3.855c0-4.386,2.613-6.809,6.61-6.809a26.9,26.9,0,0,1,3.918.342v4.307h-2.207a2.529,2.529,0,0,0-2.852,2.733v3.282h4.854l-.776,5.059H899.9V2129.2A17.505,17.505,0,0,0,914.667,2111.913Z"
+									  fill="#fff"/>
+								<path id="Path_828" data-name="Path 828"
+									  d="M903.979,2116.972l.776-5.059H899.9v-3.282a2.529,2.529,0,0,1,2.852-2.733h2.207v-4.307a26.9,26.9,0,0,0-3.918-.342c-4,0-6.61,2.423-6.61,6.809v3.855h-4.443v5.059h4.443V2129.2a17.728,17.728,0,0,0,5.469,0v-12.229Z"
+									  fill="#006837"/>
+							</g>
+						</svg>
+					</a>
+					<a href="">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+							<circle id="Ellipse_40" data-name="Ellipse 40" cx="17.5" cy="17.5" r="17.5" fill="#fff"/>
+							<g id="Group_452" data-name="Group 452" transform="translate(-940.154 -2094.414)">
+								<g id="Group_451" data-name="Group 451">
+									<g id="Group_450" data-name="Group 450">
+										<path id="Path_824" data-name="Path 824"
+											  d="M963.087,2105.293a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,963.087,2105.293Z"
+											  fill="#006837"/>
+										<path id="Path_825" data-name="Path 825"
+											  d="M957.739,2106.836a5.053,5.053,0,1,0,5.053,5.053A5.058,5.058,0,0,0,957.739,2106.836Zm0,8.29a3.237,3.237,0,1,1,3.236-3.237A3.24,3.24,0,0,1,957.739,2115.126Z"
+											  fill="#006837"/>
+										<path id="Path_826" data-name="Path 826"
+											  d="M961.75,2122.148h-8.192a6.17,6.17,0,0,1-6.163-6.163v-8.192a6.17,6.17,0,0,1,6.163-6.163h8.192a6.17,6.17,0,0,1,6.164,6.163v8.192A6.17,6.17,0,0,1,961.75,2122.148Zm-8.192-18.588a4.238,4.238,0,0,0-4.233,4.233v8.192a4.238,4.238,0,0,0,4.233,4.233h8.192a4.237,4.237,0,0,0,4.233-4.233v-8.192a4.237,4.237,0,0,0-4.233-4.233Z"
+											  fill="#006837"/>
+									</g>
+								</g>
+							</g>
+						</svg>
+					</a>
+					<a href="">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+							<circle id="Ellipse_41" data-name="Ellipse 41" cx="17.5" cy="17.5" r="17.5" fill="#fff"/>
+							<path id="Path_861" data-name="Path 861"
+								  d="M1026.732,2106.085c-.225.052-.456.079-.787.135.065-.052.128-.1.189-.154a3.686,3.686,0,0,0,1.489-2.068c-.359.166-.712.351-1.08.494s-.757.237-1.131.366a.53.53,0,0,1-.6-.143,4.175,4.175,0,0,0-6.935,3.774,1.855,1.855,0,0,1,0,.261,11.986,11.986,0,0,1-8.571-4.349,3.977,3.977,0,0,0-.561,2.212,4.223,4.223,0,0,0,1.761,3.3l-.062.1-1.709-.479c-.095,1.76.953,3.1,3.191,4.137h-1.743a4.139,4.139,0,0,0,1.453,2.052,4.354,4.354,0,0,0,2.43.859,8.892,8.892,0,0,1-6.013,1.806c.078.053.153.111.235.157a11.839,11.839,0,0,0,17.888-10.418.673.673,0,0,1,.3-.618,7.464,7.464,0,0,0,1.748-1.89c-.315.109-.545.194-.779.267S1026.974,2106.03,1026.732,2106.085Z"
+								  transform="translate(-1000.642 -2094.414)" fill="#006837"/>
+						</svg>
+					</a>
+					<a href="">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+							<circle id="Ellipse_42" data-name="Ellipse 42" cx="17.5" cy="17.5" r="17.5" fill="#fff"/>
+							<path id="Path_862" data-name="Path 862"
+								  d="M1085.692,2107.024a2.9,2.9,0,0,0-.7-1.36,2.671,2.671,0,0,0-1.677-.884c-.4-.05-.8-.086-1.2-.114-.715-.05-1.43-.1-2.145-.129q-1.215-.048-2.431-.053-2.6,0-5.2.019c-.683.005-1.367.039-2.05.061-.2.007-.393.019-.589.034-.439.032-.878.064-1.316.1a6.942,6.942,0,0,0-.878.1,2.769,2.769,0,0,0-2.205,2.131,8.885,8.885,0,0,0-.26,1.578c-.05.588-.1,1.177-.107,1.766-.021,1.405-.044,2.811.038,4.215a15.469,15.469,0,0,0,.234,1.979,3.547,3.547,0,0,0,.36,1.117,2.719,2.719,0,0,0,2.049,1.438c.556.08,1.117.128,1.677.161.888.053,1.778.095,2.667.115,1.171.027,2.342.029,3.494.042,1.064-.011,2.108-.018,3.153-.036.7-.011,1.405-.029,2.107-.063.654-.033,1.308-.088,1.961-.14a5.826,5.826,0,0,0,.78-.1,2.776,2.776,0,0,0,2.22-2.184,10.767,10.767,0,0,0,.285-1.957q.054-.847.069-1.7c.023-1.381.03-2.763-.061-4.143A13.092,13.092,0,0,0,1085.692,2107.024Zm-13.1,8.465V2107.9l7.294,3.806C1077.447,2112.977,1075.03,2114.231,1072.594,2115.489Z"
+								  transform="translate(-1057.982 -2094.414)" fill="#006837"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="copyright">
+	<p>design by bonbi | 2021</p>
 </div>
 </body>
 
