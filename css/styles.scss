@@ -14,7 +14,7 @@ button {
     }
 }
 
-p{
+p {
     margin-bottom: 0;
 }
 
@@ -82,17 +82,26 @@ body {
 
         .carousel-control-next {
             right: 442px;
+            @media(max-width: 991px){
+                right: 0;
+            }
         }
 
         .carousel-indicators {
             right: 442px;
             margin-bottom: 0;
             bottom: 30px;
+            @media(max-width: 991px){
+                right: 0;
+            }
         }
 
         .carousel-inner {
             .carousel-item {
                 min-height: 442px;
+                @media(max-width: 1199px){
+                    min-height: auto;
+                }
             }
         }
     }
@@ -105,12 +114,17 @@ body {
         height: 80px;
         background: rgba(0, 104, 55, .8);
         z-index: 1;
-
+        @media(max-width: 991px){
+            height: 50px;
+        }
         .box-logo {
             text-align: left;
 
             a {
                 line-height: 80px;
+                @media(max-width: 991px){
+                    line-height: 50px;
+                }
                 display: inline-block;
 
                 img {
@@ -120,13 +134,17 @@ body {
         }
 
         .box-menu {
-            .navbar{
+            .navbar {
                 padding: 0;
                 height: 80px;
                 text-align: right;
-                .navbar-collapse{
+                @media(max-width: 991px){
+                    height: 50px;
+                }
+                .navbar-collapse {
                     width: 100%;
-                    ul{
+
+                    ul {
                         width: 100%;
                     }
                 }
@@ -169,12 +187,25 @@ body {
         border-top: 5px solid rgba(247, 147, 30, .5);
         padding: 50px 30px;
         z-index: 1;
+        @media(max-width: 1199px){
+            padding: 20px;
+        }
+        @media(max-width: 991px) {
+            top: 0;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+
+        }
 
         .title-form {
             color: #fff;
             text-align: center;
             font-size: 31.5px;
             font-weight: bold;
+            @media(max-width: 1199px){
+                font-size: 20px;
+            }
         }
 
         .sub-title-form {
@@ -287,19 +318,28 @@ body {
     $dot-color;
     background-size: $dot-space $dot-space;
     padding: 115px 0 122px 0;
-
+    @media(max-width: 991px){
+        padding: 50px 0;
+    }
     .news {
         .box-news {
-            display: flex;
+            @media(min-width: 992px) {
+                margin: 0px -11px;
+            }
+
+            .col-md-4 {
+                padding: 0 11px;
+            }
 
             .item-news {
                 margin-left: 22px;
                 width: 100%;
-                height: 350px;
                 background: blue;
-                max-width: 33%;
                 position: relative;
                 text-align: center;
+                @media(max-width: 991px) {
+                    margin-top: 15px;
+                }
 
                 &:first-child {
                     margin-left: 0;
@@ -385,75 +425,113 @@ body {
         }
 
         .section-content {
-            img{
+            img {
                 width: 100%;
             }
-            &.row{
-                .box-item{
+
+            &.row {
+                .box-item {
                     overflow: hidden;
-                    &.item-master{
-                        img{
+
+                    &.item-master {
+                        img {
                             width: 100%;
                         }
                     }
                 }
-                div[class^="col-"]{
-                    &.sub{
+
+                div[class^="col-"] {
+                    &.sub {
                         padding: 10px;
                     }
                 }
-                .row{
-                    &.sub{
+
+                .row {
+                    &.sub {
                         margin-left: -10px;
                         margin-right: -10px;
-                        &.left{
+
+                        &.left {
                             margin-right: -15px;
                         }
-                        &.right{
+
+                        &.right {
                             margin-left: -15px;
                         }
                     }
                 }
             }
-            .row2{
-                //margin-top: 10px;
-            }
         }
 
-        .box-master{
+        .box-master {
             display: flex;
             margin-top: 50px;
-            img{
+            @media(max-width: 991px){
+                display: block;
+            }
+            img {
                 width: 100%;
             }
-            .group{
-                flex: 1;
-                &:last-child{
-                    margin-left: 20px;
+
+            .item-child{
+                @media(max-width: 991px){
+                    margin-top: 15px;
                 }
-                &.group-child{
+            }
+
+            .group {
+                flex: 1;
+
+                &:last-child {
+                    margin-left: 20px;
+                    @media(max-width: 991px){
+                        margin-left: 0;
+                    }
+                }
+
+                &.group-child {
                     display: flex;
                     flex-direction: column;
-                    .row-child{
+                    @media(max-width: 991px){
+                        display: block;
+                    }
+
+                    .row-child {
                         flex: 1;
                         display: flex;
-                        &:last-child{
-                            margin-top: 20px;
+                        @media(max-width: 768px){
+                            display: block;
                         }
-                        .item-child{
+
+                        &:last-child {
+                            margin-top: 20px;
+                            @media(max-width: 992px){
+                                margin-top: 0;
+                            }
+                        }
+
+                        .item-child {
                             flex: 1;
                             background: pink;
                             max-width: 50%;
-                            position: relative;
-                            &:last-child{
-                                margin-left: 20px;
+                            @media(max-width: 768px){
+                                max-width: 100%;
                             }
-                            .story-title{
+                            position: relative;
+
+                            &:last-child {
+                                margin-left: 20px;
+                                @media(max-width: 768px){
+                                    margin-left: 0;
+                                }
+                            }
+
+                            .story-title {
                                 position: absolute;
                                 bottom: 0;
                                 left: 0;
                                 right: 0;
-                                background: rgba(175,128,9,.8);
+                                background: rgba(175, 128, 9, .8);
                                 margin-bottom: 0;
                                 font-size: 14px;
                                 color: #fff;
@@ -465,13 +543,18 @@ body {
                         }
                     }
                 }
-                &.group-master{
+
+                &.group-master {
                     display: flex;
-                    .item-child{
+                    @media(max-width: 991px){
+                        display: block;
+                    }
+                    .item-child {
                         flex: 1;
                         background: pink;
                         position: relative;
-                        .box-des{
+
+                        .box-des {
                             position: absolute;
                             bottom: 0;
                             left: 0;
@@ -479,19 +562,24 @@ body {
                             background-image: linear-gradient(transparent, #1A1A1A);
                             color: #fff;
                             padding: 30px;
-                            .title-des{
+                            @media(max-width: 991px){
+                                padding: 15px;
+                            }
+                            .title-des {
                                 font-size: 20px;
                                 font-weight: bold;
 
                             }
-                            .line-des{
+
+                            .line-des {
                                 width: 80px;
                                 height: 3px;
                                 background: #fff;
                                 margin: 6px 0 9px 0;
                             }
                         }
-                        img{
+
+                        img {
                             width: 100%;
                             height: 100%;
                         }
@@ -531,7 +619,8 @@ body {
 .footer {
     position: relative;
     overflow: hidden;
-    .footer-bg{
+
+    .footer-bg {
         position: absolute;
         top: 0;
         right: 0;
@@ -539,10 +628,26 @@ body {
         left: 0;
         width: 100%;
         opacity: .4;
+        @media(max-width: 1440px) {
+            height: 100%;
+        }
+        @media(max-width: 991px) {
+            width: auto;
+            height: 100%;
+        }
     }
+
+    .logo-footer {
+        margin-bottom: 20px;
+    }
+
     padding: 70px 0;
+    @media(max-width: 991px) {
+        padding: 30px 0;
+    }
     color: #fff;
     background: $brand-color2;
+
     .footer-title {
         font-family: Roboto;
         font-weight: bold;
@@ -556,6 +661,10 @@ body {
         background: #fff;
         margin-top: 19px;
         margin-bottom: 30px;
+        @media(max-width: 991px) {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
     }
 
     .footer-content {
@@ -579,10 +688,11 @@ body {
     }
 
     .box-social {
-        a{
+        a {
             display: inline-block;
             margin-left: 25px;
-            &:first-child{
+
+            &:first-child {
                 margin-left: 0;
             }
         }
