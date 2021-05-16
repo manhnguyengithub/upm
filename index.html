@@ -31,60 +31,73 @@
 					</a>
 				</div>
 				<div class="col-8 box-menu">
-<!--					<ul>-->
-<!--						<li class="active">Home</li>-->
-<!--						<li>About-->
-<!--							<span>-->
-<!--								<img src="assets/img/arrow_down.png" alt="">-->
-<!--							</span>-->
-<!--						</li>-->
-<!--						<li>Methodology-->
-<!--							<span>-->
-<!--								<img src="assets/img/arrow_down.png" alt="">-->
-<!--							</span>-->
-<!--						</li>-->
-<!--						<li>Rating-->
-<!--							<span>-->
-<!--								<img src="assets/img/arrow_down.png" alt="">-->
-<!--							</span>-->
-<!--						</li>-->
-<!--						<li>News</li>-->
-<!--						<li>Contact</li>-->
-<!--					</ul>-->
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
+					<!--					<ul>-->
+					<!--						<li class="active">Home</li>-->
+					<!--						<li>About-->
+					<!--							<span>-->
+					<!--								<img src="assets/img/arrow_down.png" alt="">-->
+					<!--							</span>-->
+					<!--						</li>-->
+					<!--						<li>Methodology-->
+					<!--							<span>-->
+					<!--								<img src="assets/img/arrow_down.png" alt="">-->
+					<!--							</span>-->
+					<!--						</li>-->
+					<!--						<li>Rating-->
+					<!--							<span>-->
+					<!--								<img src="assets/img/arrow_down.png" alt="">-->
+					<!--							</span>-->
+					<!--						</li>-->
+					<!--						<li>News</li>-->
+					<!--						<li>Contact</li>-->
+					<!--					</ul>-->
+					<nav>
 
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
-								<li class="nav-item active">
-									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										Dropdown
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Something else here</a>
-									</div>
-								</li>
-							</ul>
-						</div>
+						<label for="drop" class="toggle">Menu</label>
+						<input type="checkbox" id="drop" />
+						<ul class="menu">
+							<li><a class="menu-link active" href="#">Home</a></li>
+							<li>
+								<label for="drop-1" class="toggle">About</label>
+								<a class="menu-link" href="#">About
+									<svg xmlns="http://www.w3.org/2000/svg" width="8.276" height="4.123"
+										 viewBox="0 0 8.276 4.123">
+										<path id="Path_890" data-name="Path 890"
+											  d="M843.836,40.634l-3.808,3.03-3.808-3.03"
+											  transform="translate(-835.891 -40.219)" fill="none" stroke="#fff"
+											  stroke-miterlimit="10" stroke-width="1.06"/>
+									</svg>
+								</a>
+								<input type="checkbox" id="drop-1"/>
+								<ul class="sub-menu">
+									<li><a class="sub-link" href="#">about 1</a></li>
+									<li><a class="sub-link" href="#">about 2</a></li>
+									<li><a class="sub-link" href="#">about 3</a></li>
+								</ul>
+
+							</li>
+							<li>
+								<label for="drop-2" class="toggle">About</label>
+								<a class="menu-link" href="#">Methodology</a>
+								<input type="checkbox" id="drop-2"/>
+								<ul>
+									<li><a class="sub-link" href="#">Methodology1</a></li>
+									<li><a class="sub-link" href="#">Methodology2</a></li>
+								</ul>
+							</li>
+							<li><a class="menu-link" href="#">Rating</a></li>
+							<li><a class="menu-link" href="#">News</a></li>
+							<li><a class="menu-link" href="#">Contact</a></li>
+						</ul>
 					</nav>
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--slide-->
 	<div id="banner-slide" class="carousel slide" data-ride="carousel">
-<!--		<div class="over-lay"></div>-->
+		<!--		<div class="over-lay"></div>-->
 		<ul class="carousel-indicators">
 			<li data-target="#banner-slide" data-slide-to="0" class="active"></li>
 			<li data-target="#banner-slide" data-slide-to="1"></li>
@@ -148,31 +161,31 @@
 	<div class="news">
 		<div class="container">
 			<div class="row box-news">
-<!--				<div class="col-12">-->
-<!--					<div class="box-news">-->
-<!--						<div class="item-news">-->
-<!--							<img src="assets/img/new1.png" alt="">-->
-<!--							<div class="box-text">-->
-<!--								<h3>university ranking</h3>-->
-<!--								<button>see more</button>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div class="item-news">-->
-<!--							<img src="assets/img/new2.png" alt="">-->
-<!--							<div class="box-text">-->
-<!--								<h3>news</h3>-->
-<!--								<button>see more</button>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div class="item-news">-->
-<!--							<img src="assets/img/new3.png" alt="">-->
-<!--							<div class="box-text">-->
-<!--								<h3>career advise</h3>-->
-<!--								<button>see more</button>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
+				<!--				<div class="col-12">-->
+				<!--					<div class="box-news">-->
+				<!--						<div class="item-news">-->
+				<!--							<img src="assets/img/new1.png" alt="">-->
+				<!--							<div class="box-text">-->
+				<!--								<h3>university ranking</h3>-->
+				<!--								<button>see more</button>-->
+				<!--							</div>-->
+				<!--						</div>-->
+				<!--						<div class="item-news">-->
+				<!--							<img src="assets/img/new2.png" alt="">-->
+				<!--							<div class="box-text">-->
+				<!--								<h3>news</h3>-->
+				<!--								<button>see more</button>-->
+				<!--							</div>-->
+				<!--						</div>-->
+				<!--						<div class="item-news">-->
+				<!--							<img src="assets/img/new3.png" alt="">-->
+				<!--							<div class="box-text">-->
+				<!--								<h3>career advise</h3>-->
+				<!--								<button>see more</button>-->
+				<!--							</div>-->
+				<!--						</div>-->
+				<!--					</div>-->
+				<!--				</div>-->
 
 				<div class="col-md-4 col-12">
 					<div class="item-news">
