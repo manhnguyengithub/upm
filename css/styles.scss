@@ -717,20 +717,23 @@ body {
     nav {
         margin: 0;
         padding: 0;
-        .menu-link{
+
+        .menu-link {
             line-height: 80px;
             display: inline-block;
             color: #fff;
             font-size: 14px;
             text-transform: uppercase;
             padding: 0 0 0 28px;
-            &.active{
+
+            &.active {
                 font-weight: bold;
                 color: $brand-color1;
             }
         }
-        .sub-link{
-            &:hover{
+
+        .sub-link {
+            &:hover {
                 background: transparent;
             }
         }
@@ -809,6 +812,7 @@ body {
         nav {
             margin: 0;
             z-index: 99;
+
             ul {
                 li {
                     display: block;
@@ -927,104 +931,150 @@ body {
 
 }
 
-.main-detail{
+
+.main-detail {
     position: relative;
     background: #E5E5E5;
-    .img-banner{
+
+    .img-banner {
         position: relative;
         width: 100%;
     }
-    .main-content{
+
+    .main-content {
         margin-top: -300px;
-        @media(max-width: 767px){
+        @media(max-width: 767px) {
             margin-top: -80px;
         }
-        .main-title{
-            color: rgba(255,255,255, .6);
+
+        .main-title {
+            color: rgba(255, 255, 255, .6);
             font-size: 50px;
             font-weight: bold;
             margin-bottom: 26px;
-            @media(max-width: 767px){
+            @media(max-width: 767px) {
                 font-size: 25px;
                 margin-bottom: 10px;
             }
 
         }
-        .box-content{
+
+        .box-content {
             background: #fff;
             padding: 40px 50px 80px 50px;
-            @media(max-width: 767px){
+            @media(max-width: 767px) {
                 padding: 20px;
             }
-            .content-title{
+
+            .content-title {
                 color: #006935;
                 font-weight: bold;
                 font-size: 32px;
-                @media(max-width: 767px){
+                @media(max-width: 767px) {
                     font-size: 22px;
                 }
             }
-            .board-content{
+
+        }
+
+        // UPM Advisory Board
+        &.upm-board {
+            .board-content {
                 margin-top: 30px;
-                &:last-child{
+
+                &:last-child {
                     margin-bottom: 20px;
                 }
             }
-            .item-advisory{
+
+            .item-advisory {
                 display: flex;
                 background: #F2F2F2;
                 margin-top: 10px;
-                @media(max-width: 767px){
+                @media(max-width: 767px) {
                     display: block;
                 }
-                &:first-child{
+
+                &:first-child {
                     margin-top: 30px;
                 }
-                .box-image{
+
+                .box-image {
                     width: 200px;
-                    @media(max-width: 767px){
+                    @media(max-width: 767px) {
                         width: 100%;
                         padding: 20px;
                         text-align: center;
                     }
-                    img{
-                        width: 70%;
+
+                    img {
+                        width: 100%;
                         object-fit: cover;
+                        @media(max-width: 767px) {
+                            width: 70%;
+                        }
                     }
                 }
-                .box-name{
+
+                .box-name {
                     width: calc(100% - 200px);
-                    @media(max-width: 767px){
+                    @media(max-width: 767px) {
                         width: 100%;
                         text-align: center;
                         padding: 20px;
                     }
                     padding: 45px;
-                    .advisory-name{
+
+                    .advisory-name {
                         font-weight: bold;
                         font-size: 20px;
-                        @media(max-width: 767px){
-                           text-align: center;
+                        @media(max-width: 767px) {
+                            text-align: center;
                         }
                     }
-                    .line{
+
+                    .line {
                         width: 120px;
                         height: 2px;
                         background: #333333;
                         margin-top: 15px;
                         display: inline-block;
                     }
-                    .advisory-pos{
+
+                    .advisory-pos {
                         line-height: 24px;
                         font-size: 16px;
                         color: $color-gray6;
                         margin-top: 15px;
-                        @media(max-width: 767px){
+                        @media(max-width: 767px) {
                             text-align: center;
                         }
                     }
                 }
             }
+        }
+
+        //Nguyen Tat Thanh University
+        .box-banner-uni {
+            position: relative;
+
+            .uni-banner {
+                width: 100%;
+            }
+            .uni-logo{
+                position: absolute;
+                display: inline-block;
+                bottom: 50px;
+                left: 50px;
+                padding: 21px 20px;
+                background: #fff;
+
+            }
+
+        }
+
+        &.upm-university {
+
         }
     }
 }

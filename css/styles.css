@@ -613,54 +613,68 @@ p {
         @media (max-width: 767px) {
           .main-detail .main-content .box-content .content-title {
             font-size: 22px; } }
-      .main-detail .main-content .box-content .board-content {
+    .main-detail .main-content.upm-board .board-content {
+      margin-top: 30px; }
+      .main-detail .main-content.upm-board .board-content:last-child {
+        margin-bottom: 20px; }
+    .main-detail .main-content.upm-board .item-advisory {
+      display: flex;
+      background: #F2F2F2;
+      margin-top: 10px; }
+      @media (max-width: 767px) {
+        .main-detail .main-content.upm-board .item-advisory {
+          display: block; } }
+      .main-detail .main-content.upm-board .item-advisory:first-child {
         margin-top: 30px; }
-        .main-detail .main-content .box-content .board-content:last-child {
-          margin-bottom: 20px; }
-      .main-detail .main-content .box-content .item-advisory {
-        display: flex;
-        background: #F2F2F2;
-        margin-top: 10px; }
+      .main-detail .main-content.upm-board .item-advisory .box-image {
+        width: 200px; }
         @media (max-width: 767px) {
-          .main-detail .main-content .box-content .item-advisory {
-            display: block; } }
-        .main-detail .main-content .box-content .item-advisory:first-child {
-          margin-top: 30px; }
-        .main-detail .main-content .box-content .item-advisory .box-image {
-          width: 200px; }
+          .main-detail .main-content.upm-board .item-advisory .box-image {
+            width: 100%;
+            padding: 20px;
+            text-align: center; } }
+        .main-detail .main-content.upm-board .item-advisory .box-image img {
+          width: 100%;
+          object-fit: cover; }
           @media (max-width: 767px) {
-            .main-detail .main-content .box-content .item-advisory .box-image {
-              width: 100%;
-              padding: 20px;
+            .main-detail .main-content.upm-board .item-advisory .box-image img {
+              width: 70%; } }
+      .main-detail .main-content.upm-board .item-advisory .box-name {
+        width: calc(100% - 200px);
+        padding: 45px; }
+        @media (max-width: 767px) {
+          .main-detail .main-content.upm-board .item-advisory .box-name {
+            width: 100%;
+            text-align: center;
+            padding: 20px; } }
+        .main-detail .main-content.upm-board .item-advisory .box-name .advisory-name {
+          font-weight: bold;
+          font-size: 20px; }
+          @media (max-width: 767px) {
+            .main-detail .main-content.upm-board .item-advisory .box-name .advisory-name {
               text-align: center; } }
-          .main-detail .main-content .box-content .item-advisory .box-image img {
-            width: 70%;
-            object-fit: cover; }
-        .main-detail .main-content .box-content .item-advisory .box-name {
-          width: calc(100% - 200px);
-          padding: 45px; }
+        .main-detail .main-content.upm-board .item-advisory .box-name .line {
+          width: 120px;
+          height: 2px;
+          background: #333333;
+          margin-top: 15px;
+          display: inline-block; }
+        .main-detail .main-content.upm-board .item-advisory .box-name .advisory-pos {
+          line-height: 24px;
+          font-size: 16px;
+          color: #606060;
+          margin-top: 15px; }
           @media (max-width: 767px) {
-            .main-detail .main-content .box-content .item-advisory .box-name {
-              width: 100%;
-              text-align: center;
-              padding: 20px; } }
-          .main-detail .main-content .box-content .item-advisory .box-name .advisory-name {
-            font-weight: bold;
-            font-size: 20px; }
-            @media (max-width: 767px) {
-              .main-detail .main-content .box-content .item-advisory .box-name .advisory-name {
-                text-align: center; } }
-          .main-detail .main-content .box-content .item-advisory .box-name .line {
-            width: 120px;
-            height: 2px;
-            background: #333333;
-            margin-top: 15px;
-            display: inline-block; }
-          .main-detail .main-content .box-content .item-advisory .box-name .advisory-pos {
-            line-height: 24px;
-            font-size: 16px;
-            color: #606060;
-            margin-top: 15px; }
-            @media (max-width: 767px) {
-              .main-detail .main-content .box-content .item-advisory .box-name .advisory-pos {
-                text-align: center; } }
+            .main-detail .main-content.upm-board .item-advisory .box-name .advisory-pos {
+              text-align: center; } }
+    .main-detail .main-content .box-banner-uni {
+      position: relative; }
+      .main-detail .main-content .box-banner-uni .uni-banner {
+        width: 100%; }
+      .main-detail .main-content .box-banner-uni .uni-logo {
+        position: absolute;
+        display: inline-block;
+        bottom: 50px;
+        left: 50px;
+        padding: 21px 20px;
+        background: #fff; }
