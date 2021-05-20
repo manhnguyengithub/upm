@@ -8,6 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
 button {
     &:focus {
         outline: none;
@@ -978,7 +979,7 @@ body {
         }
 
         // UPM Advisory Board
-        &.upm-board {
+        .upm-board {
             .board-content {
                 margin-top: 30px;
 
@@ -1061,7 +1062,8 @@ body {
             .uni-banner {
                 width: 100%;
             }
-            .uni-logo{
+
+            .uni-logo {
                 position: absolute;
                 display: inline-block;
                 bottom: 50px;
@@ -1073,8 +1075,23 @@ body {
 
         }
 
-        &.upm-university {
+        .upm-university {
+            .uni-address {
+                position: relative;
+                padding-left: 28px;
 
+                svg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            .uni-address{
+                color: #333333;
+            }
+            .overall-rating{
+                color: #969696;
+            }
         }
     }
 }
