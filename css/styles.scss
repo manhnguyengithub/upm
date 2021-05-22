@@ -1076,9 +1076,12 @@ body {
         }
 
         .upm-university {
+            padding-bottom: 50px;
+            border-bottom: 2px solid #E2E2E2;
             .uni-address {
                 position: relative;
                 padding-left: 28px;
+                margin-top: 43px;
 
                 svg {
                     position: absolute;
@@ -1086,12 +1089,211 @@ body {
                     top: 0;
                 }
             }
-            .uni-address{
+
+            .uni-address {
                 color: #333333;
             }
-            .overall-rating{
+
+            .overall-rating {
                 color: #969696;
+                margin-top: 26px;
+            }
+
+            .box-star-rating {
+                margin-top: 8px;
+                transform: scale(0.8);
+                transform-origin: left top;
+            }
+
+            .group-progress {
+                display: flex;
+
+                .item-progress {
+                    flex: 1 1 auto;
+                    border: 1px solid #E3E3E3;
+                    padding: 10px;
+                    min-height: 100px;
+                    max-width: 25%;
+                    margin-left: 15px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+
+                    .title {
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+
+                    .number {
+                        font-size: 24px;
+                        font-size: 400;
+                    }
+
+                    .box-progress {
+                        $circle-size: 110px;
+                        $circle-background: #C9C9C9;
+                        $circle-color: #879954;
+                        $inset-size: 90px;
+                        $inset-color: #fbfbfb;
+                        $transition-length: 1s;
+
+                        .ko-progress-circle {
+                            margin: 20px auto;
+                            width: $circle-size;
+                            height: $circle-size;
+
+                            background-color: $circle-background;
+                            border-radius: 50%;
+
+                            .ko-progress-circle__slice, .ko-progress-circle__fill {
+                                width: $circle-size;
+                                height: $circle-size;
+                                position: absolute;
+                                -webkit-backface-visibility: hidden;
+                                transition: transform $transition-length;
+                                border-radius: 50%;
+                            }
+
+                            .ko-progress-circle__slice {
+                                clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+
+                                .ko-progress-circle__fill {
+                                    clip: rect(0px, $circle-size/2, $circle-size, 0px);
+                                    background-color: $circle-color;
+                                }
+                            }
+
+                            .ko-progress-circle__overlay {
+                                width: $inset-size;
+                                height: $inset-size;
+                                position: absolute;
+                                margin-left: ($circle-size - $inset-size)/2;
+                                margin-top: ($circle-size - $inset-size)/2;
+
+                                background-color: $inset-color;
+                                border-radius: 50%;
+                            }
+
+                            $i: 0;
+                            $increment: 180deg / 100;
+                            @while $i <= 100 {
+                                &[data-progress='#{$i}'] {
+                                    .ko-progress-circle__slice.full, .ko-progress-circle__fill {
+                                        transform: rotate($increment * $i);
+                                    }
+
+                                    .ko-progress-circle__fill.ko-progress-circle__bar {
+                                        transform: rotate($increment * $i * 2);
+                                    }
+
+                                    $i: $i + 1;
+                                }
+                            }
+                        }
+                    }
+                    .box-percent{
+                        .row{
+                            margin: 0;
+                            .col-6{
+                                padding: 0;
+                                &:first-child{
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                        .percent{
+                            .ranking-name{
+                                font-size: 10px;
+                                font-weight: 300;
+                                padding-left: 20px;
+                                position: relative;
+                                &:before{
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 15px;
+                                    display: inline-block;
+                                    content: '';
+                                    background: #C9C9C9;
+                                    left: 0;
+                                    position: absolute;
+
+                                }
+                                &.ranking-active{
+                                    &:before{
+                                        background: #879954;
+                                    }
+                                }
+                            }
+                            .ranking-percent{
+                                font-size: 16px;
+                                font-weight: 400;
+                                margin-top: 6px;
+                                padding-left: 20px;
+                                line-height: 1;
+                            }
+                        }
+                    }
+                }
             }
         }
+        .box-overview{
+            padding-bottom: 50px;
+            h3{
+                margin-bottom: 0;
+            }
+            .content-overview{
+                font-size: 14px;
+                margin-top: 20px;
+                font-weight: 300;
+                line-height: 24px;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.box-star-rating {
+    width: 50px;
+    height: 50px;
+    border: 2px solid $brand-color1;
+    border-bottom: 0;
+    position: relative;
+
+    .star-number {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+
+        span {
+            display: inline-block;
+            font-size: 25px;
+            color: $brand-color1;
+            font-weight: bold;
+            line-height: 20px;
+            margin-right: 3px;
+            padding-top: 3px;
+            line-height: 26px;
+        }
+
+        svg {
+
+        }
+    }
+
+    .rating-text {
+        position: absolute;
+        height: 17px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: $brand-color1;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 17px;
+        font-size: 11px;
+        margin: 0;
     }
 }
