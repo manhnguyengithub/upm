@@ -1183,6 +1183,88 @@ p {
         font-weight: 300;
         line-height: 24px;
         text-align: justify; }
+    .main-detail .main-content .out-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 88px;
+      margin-bottom: 20px; }
+    .main-detail .main-content .university-highlight .box-title {
+      color: #006837;
+      font-weight: bold;
+      font-size: 20px;
+      padding-bottom: 13px;
+      border-bottom: 3px solid #E3E3E3;
+      margin-bottom: 0; }
+      .main-detail .main-content .university-highlight .box-title.evaluation {
+        margin-top: 75px; }
+    .main-detail .main-content .university-highlight .chart-tab {
+      display: flex;
+      margin-top: 34px; }
+      .main-detail .main-content .university-highlight .chart-tab .item-tab {
+        flex: 1;
+        border: 1px solid #006837;
+        height: 40px;
+        max-width: 200px;
+        background: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center;
+        color: #4D4D4D;
+        display: inline-block; }
+        .main-detail .main-content .university-highlight .chart-tab .item-tab.active {
+          background: #006837;
+          color: #fff; }
+    .main-detail .main-content .university-highlight .box-chart {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #E3E3E3;
+      margin-top: 25px; }
+    .main-detail .main-content .university-highlight .group-evaluation .item-evaluation {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #E3E3E3;
+      padding: 14px 0; }
+      .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .title {
+        flex: 5; }
+        .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .title p {
+          word-break: break-word; }
+      .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .rating {
+        flex: 1; }
+      .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar {
+        flex: 4; }
+        .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar .bar {
+          height: 30px;
+          background: #3C4857;
+          position: relative; }
+          .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar .bar .active-bar {
+            height: 100%;
+            background: #F7931E;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0; }
+            .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar .bar .active-bar span {
+              display: inline-block;
+              font-weight: bold;
+              font-size: 16px;
+              color: #fff;
+              padding-left: 20px;
+              line-height: 30px; }
+          .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar .bar .box-total {
+            height: 30px;
+            width: 60px;
+            background: #fff;
+            margin-left: calc(100% - 60px); }
+            .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar .bar .box-total .total-number {
+              display: inline-block;
+              line-height: 30px;
+              font-weight: bold;
+              font-size: 16px;
+              color: #333333;
+              padding-left: 20px; }
 
 .box-star-rating {
   width: 50px;
