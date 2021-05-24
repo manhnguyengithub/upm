@@ -585,7 +585,9 @@ p {
   background: #E5E5E5; }
   .main-detail .img-banner {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    max-height: 55vh;
+    object-fit: cover; }
   .main-detail .main-content {
     margin-top: -300px; }
     @media (max-width: 767px) {
@@ -609,7 +611,8 @@ p {
       .main-detail .main-content .box-content .content-title {
         color: #006935;
         font-weight: bold;
-        font-size: 32px; }
+        font-size: 32px;
+        margin-bottom: 0; }
         @media (max-width: 767px) {
           .main-detail .main-content .box-content .content-title {
             font-size: 22px; } }
@@ -670,7 +673,9 @@ p {
     .main-detail .main-content .box-banner-uni {
       position: relative; }
       .main-detail .main-content .box-banner-uni .uni-banner {
-        width: 100%; }
+        width: 100%;
+        max-height: 332px;
+        object-fit: cover; }
       .main-detail .main-content .box-banner-uni .uni-logo {
         position: absolute;
         display: inline-block;
@@ -1265,6 +1270,61 @@ p {
               font-size: 16px;
               color: #333333;
               padding-left: 20px; }
+    .main-detail .main-content .research-university {
+      margin-top: 40px; }
+      .main-detail .main-content .research-university .group-research-ranking {
+        margin-top: 30px; }
+        .main-detail .main-content .research-university .group-research-ranking .table-ranking {
+          width: 100%; }
+          .main-detail .main-content .research-university .group-research-ranking .table-ranking thead tr {
+            background: #CDF1BC; }
+            .main-detail .main-content .research-university .group-research-ranking .table-ranking thead tr th {
+              color: #006837;
+              height: 50px;
+              padding: 0px 15px;
+              line-height: 50px;
+              text-align: left;
+              text-transform: uppercase; }
+          .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr td {
+            padding: 0px 15px;
+            line-height: 80px;
+            font-weight: bold;
+            font-size: 16px; }
+          .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr:nth-child(odd) {
+            background: #fff; }
+          .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr:nth-child(even) {
+            background: #F1F1F1; }
+          @media (max-width: 767px) {
+            .main-detail .main-content .research-university .group-research-ranking .table-ranking thead {
+              display: none; }
+            .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody, .main-detail .main-content .research-university .group-research-ranking .table-ranking tr, .main-detail .main-content .research-university .group-research-ranking .table-ranking td {
+              display: block;
+              width: 100%; }
+            .main-detail .main-content .research-university .group-research-ranking .table-ranking tr {
+              margin-bottom: 15px;
+              background: #F1F1F1 !important;
+              padding: 10px 0px; }
+            .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr td {
+              text-align: right;
+              padding-left: 40%;
+              position: relative;
+              line-height: 20px;
+              padding-top: 10px;
+              padding-bottom: 10px; }
+            .main-detail .main-content .research-university .group-research-ranking .table-ranking td:before {
+              content: attr(data-label);
+              position: absolute;
+              left: 0;
+              width: 40%;
+              font-weight: bold;
+              line-height: 20px;
+              top: calc(50% - 10px); } }
+      .main-detail .main-content .research-university.applied-university .content-title {
+        color: #C1272D; }
+      .main-detail .main-content .research-university.applied-university .table-ranking thead tr {
+        background: #E12125; }
+        .main-detail .main-content .research-university.applied-university .table-ranking thead tr th {
+          color: #fff; }
 
 .box-star-rating {
   width: 50px;

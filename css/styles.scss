@@ -940,6 +940,8 @@ body {
     .img-banner {
         position: relative;
         width: 100%;
+        max-height: 55vh;
+        object-fit: cover;
     }
 
     .main-content {
@@ -971,6 +973,7 @@ body {
                 color: #006935;
                 font-weight: bold;
                 font-size: 32px;
+                margin-bottom: 0;
                 @media(max-width: 767px) {
                     font-size: 22px;
                 }
@@ -1061,6 +1064,8 @@ body {
 
             .uni-banner {
                 width: 100%;
+                max-height: 332px;
+                object-fit: cover;
             }
 
             .uni-logo {
@@ -1383,6 +1388,96 @@ body {
                 }
             }
 
+        }
+
+        //page 4
+        .research-university{
+            margin-top: 40px;
+            .group-research-ranking{
+                margin-top: 30px;
+                .table-ranking{
+                    width: 100%;
+                    thead{
+                        tr{
+                            background: #CDF1BC;
+                            th{
+                                color: $brand-color2;
+                                height: 50px;
+                                padding: 0px 15px;
+                                line-height: 50px;
+                                text-align: left;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                padding: 0px 15px;
+                                line-height: 80px;
+                                font-weight: bold;
+                                font-size: 16px;
+                            }
+                            &:nth-child(odd){
+                                background: #fff;
+                            }
+                            &:nth-child(even){
+                                background: #F1F1F1;
+                            }
+                        }
+                    }
+                    @media(max-width: 767px){
+                        thead{
+                            display: none;
+                        }
+                        tbody, tr, td{
+                            display: block;
+                            width: 100%;
+                        }
+                        tr{
+                            margin-bottom: 15px;
+                            background: #F1F1F1 !important;
+                            padding: 10px 0px;
+                        }
+                        tbody{
+                            tr{
+                                td{
+                                    text-align: right;
+                                    padding-left: 40%;
+                                    position: relative;
+                                    line-height: 20px;
+                                    padding-top: 10px;
+                                    padding-bottom: 10px;
+                                }
+                            }
+                        }
+                        td:before{
+                            content: attr(data-label);
+                            position: absolute;
+                            left: 0;
+                            width: 40%;
+                            font-weight: bold;
+                            line-height: 20px;
+                            top: calc(50% - 10px);
+                        }
+                    }
+                }
+            }
+            &.applied-university{
+                .content-title{
+                    color: #C1272D;
+                }
+                .table-ranking{
+                    thead{
+                        tr{
+                            background: #E12125;
+                            th{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }
