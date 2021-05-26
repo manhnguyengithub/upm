@@ -8,6 +8,29 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.custome-scroll {
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, .08);
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, .1);
+    }
+
+}
+
 
 button {
     &:focus {
@@ -1391,87 +1414,21 @@ body {
         }
 
         //page 4
-        .research-university{
+        .research-university {
             margin-top: 40px;
-            .group-research-ranking{
-                margin-top: 30px;
-                .table-ranking{
-                    width: 100%;
-                    thead{
-                        tr{
-                            background: #CDF1BC;
-                            th{
-                                color: $brand-color2;
-                                height: 50px;
-                                padding: 0px 15px;
-                                line-height: 50px;
-                                text-align: left;
-                                text-transform: uppercase;
-                            }
-                        }
-                    }
-                    tbody{
-                        tr{
-                            td{
-                                padding: 0px 15px;
-                                line-height: 80px;
-                                font-weight: bold;
-                                font-size: 16px;
-                            }
-                            &:nth-child(odd){
-                                background: #fff;
-                            }
-                            &:nth-child(even){
-                                background: #F1F1F1;
-                            }
-                        }
-                    }
-                    @media(max-width: 767px){
-                        thead{
-                            display: none;
-                        }
-                        tbody, tr, td{
-                            display: block;
-                            width: 100%;
-                        }
-                        tr{
-                            margin-bottom: 15px;
-                            background: #F1F1F1 !important;
-                            padding: 10px 0px;
-                        }
-                        tbody{
-                            tr{
-                                td{
-                                    text-align: right;
-                                    padding-left: 40%;
-                                    position: relative;
-                                    line-height: 20px;
-                                    padding-top: 10px;
-                                    padding-bottom: 10px;
-                                }
-                            }
-                        }
-                        td:before{
-                            content: attr(data-label);
-                            position: absolute;
-                            left: 0;
-                            width: 40%;
-                            font-weight: bold;
-                            line-height: 20px;
-                            top: calc(50% - 10px);
-                        }
-                    }
-                }
-            }
-            &.applied-university{
-                .content-title{
+
+
+            &.applied-university {
+                .content-title {
                     color: #C1272D;
                 }
-                .table-ranking{
-                    thead{
-                        tr{
+
+                .table-ranking {
+                    thead {
+                        tr {
                             background: #E12125;
-                            th{
+
+                            th {
                                 color: #fff;
                             }
                         }
@@ -1480,6 +1437,278 @@ body {
             }
         }
 
+        //page 5 university-ranking
+        .university-ranking {
+            .box-filter {
+                background: #F1F1F1;
+                padding: 40px 30px;
+                display: flex;
+
+                details {
+                    position: relative;
+                    width: 293px;
+                }
+
+                details[open] {
+                    z-index: 1;
+                }
+
+                summary {
+                    cursor: pointer;
+                    background-color: #fff;
+                    list-style: none;
+                    height: 50px;
+                    line-height: 50px;
+                    padding-left: 15px;
+                    color: #989898;
+                }
+
+                summary::-webkit-details-marker {
+                    display: none;
+                }
+
+                details[open] summary:before {
+                    content: '';
+                    display: block;
+                    width: 100vw;
+                    height: 100vh;
+                    background: transparent;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                }
+
+                summary:after {
+                    content: '';
+                    display: inline-block;
+                    float: right;
+                    width: 7px;
+                    height: 7px;
+                    position: absolute;
+                    right: 15px;
+                    top: 18px;
+                    border-bottom: 1px solid #989898;
+                    border-left: 1px solid #989898;
+                    transform: rotate(135deg) translate(50%, 0%);
+                    transform-origin: center center;
+                    transition: transform ease-in-out 100ms
+                }
+
+                summary:focus {
+                    outline: none;
+                }
+
+                details[open] summary:after {
+                    transform: rotate(-45deg) translate(0%, 0%);
+                }
+
+                ul {
+                    width: 100%;
+                    background: #fff;
+                    position: absolute;
+                    top: calc(100% + .5rem);
+                    left: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    max-height: 200px;
+                    overflow-y: auto;
+                }
+
+                li {
+                    margin: 0;
+                    padding: 15px;
+                    border-bottom: 1px solid #ccc;
+                    list-style: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #CDF1BC;
+                    }
+                }
+
+                li:first-child {
+                    padding-top: 15px;
+                }
+
+                li:last-child {
+                    padding-bottom: 15px;
+                    border-bottom: none;
+                }
+
+                /* FAKE SELECT */
+
+                summary.radios {
+                    counter-reset: radios;
+                }
+
+                input[type=radio] {
+                    counter-increment: radios;
+                    appearance: none;
+                    display: none;
+                }
+
+                input[type=radio]:checked {
+                    display: inline;
+                }
+
+                input[type=radio]:after {
+                    content: attr(title);
+                    display: inline;
+                    font-size: 1rem;
+                }
+
+                ul.list {
+                    counter-reset: labels;
+                }
+
+                label {
+                    width: 100%;
+                    display: block;
+                    cursor: pointer;
+                }
+
+                .uni-select {
+
+                }
+
+                // custome color placeholder
+                ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: #989898;
+                    opacity: 1; /* Firefox */
+                }
+
+                :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: #989898;
+                }
+
+                ::-ms-input-placeholder { /* Microsoft Edge */
+                    color: #989898;
+                }
+
+                input {
+
+                }
+
+                .input-filter {
+                    margin-left: 20px;
+                    padding-left: 15px;
+                    height: 50px;
+                }
+            }
+
+            .box-paging {
+                margin-top: 40px;
+
+                .result {
+                    span {
+                        font-size: 14px;
+                    }
+
+                    select {
+                        border: 1px solid #E5E5E5;
+                        display: inline-block;
+                        margin-left: 15px;
+                        margin-right: 20px;
+                    }
+                }
+
+                .paging {
+                    text-align: right;
+
+                    .item-paging {
+                        display: inline-block;
+                        height: 30px;
+                        width: 30px;
+                        margin-left: 5.4px;
+                        background: #F1F1F1;
+                        line-height: 30px;
+                        text-align: center;
+
+                        &.active {
+                            background: $brand-color2;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .box-no-padding {
+            padding: 0;
+            margin: 100px 0px;
+            background: #E4E4E4;
+
+            .box-article {
+                background: #E4E4E4;
+
+                .row-article {
+                    display: grid;
+                    grid-auto-flow: column;
+                    gap: 20px;
+                }
+
+                .col-article {
+                    background: #fff;
+                    //max-width: 33%;
+
+                    .content {
+                        padding: 40px;
+                        position: relative;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            display: inline-block;
+                            width: 0;
+                            height: 0;
+                            border-left: 20px solid transparent;
+                            border-right: 20px solid transparent;
+                            border-top: 20px solid #fff;
+                            bottom: -20px;
+                            left: 40px;
+                        }
+                        .ar-time{
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                        .ar-title{
+                            font-size: 16px;
+                            font-weight: bold;
+                            margin-top: 33px;
+                        }
+                        .hr{
+                            height: 2px;
+                            width: 53px;
+                            background: #CBCBCB;
+                            margin-top: 26px;
+                        }
+                        .ar-content{
+                            font-size: 12px;
+                            font-weight: 300;
+                            margin-top: 27px;
+                        }
+                        .ar-readmore{
+                            margin-top: 20px;
+                            a{
+                                color: #B2B2B2;
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .img {
+
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1526,5 +1755,91 @@ body {
         line-height: 17px;
         font-size: 11px;
         margin: 0;
+    }
+}
+
+.group-research-ranking {
+    margin-top: 30px;
+
+    .table-ranking {
+        width: 100%;
+
+        thead {
+            tr {
+                background: #CDF1BC;
+
+                th {
+                    color: $brand-color2;
+                    height: 50px;
+                    padding: 0px 15px;
+                    line-height: 50px;
+                    text-align: left;
+                    text-transform: uppercase;
+
+                    &.right-score {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    padding: 0px 15px;
+                    line-height: 80px;
+                    font-weight: bold;
+                    font-size: 16px;
+
+                    &.right-score {
+                        text-align: right;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    background: #fff;
+                }
+
+                &:nth-child(even) {
+                    background: #F1F1F1;
+                }
+            }
+        }
+
+        @media(max-width: 767px) {
+            thead {
+                display: none;
+            }
+            tbody, tr, td {
+                display: block;
+                width: 100%;
+            }
+            tr {
+                margin-bottom: 15px;
+                background: #F1F1F1 !important;
+                padding: 10px 0px;
+            }
+            tbody {
+                tr {
+                    td {
+                        text-align: right;
+                        padding-left: 40%;
+                        position: relative;
+                        line-height: 20px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 40%;
+                font-weight: bold;
+                line-height: 20px;
+                top: calc(50% - 10px);
+            }
+        }
     }
 }

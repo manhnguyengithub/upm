@@ -7,6 +7,20 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif; }
 
+.custome-scroll {
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  .custome-scroll ::-webkit-scrollbar {
+    width: 6px; }
+  .custome-scroll ::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  .custome-scroll ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.08); }
+  .custome-scroll ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.1); }
+
 button:focus {
   outline: none; }
 
@@ -1272,59 +1286,188 @@ p {
               padding-left: 20px; }
     .main-detail .main-content .research-university {
       margin-top: 40px; }
-      .main-detail .main-content .research-university .group-research-ranking {
-        margin-top: 30px; }
-        .main-detail .main-content .research-university .group-research-ranking .table-ranking {
-          width: 100%; }
-          .main-detail .main-content .research-university .group-research-ranking .table-ranking thead tr {
-            background: #CDF1BC; }
-            .main-detail .main-content .research-university .group-research-ranking .table-ranking thead tr th {
-              color: #006837;
-              height: 50px;
-              padding: 0px 15px;
-              line-height: 50px;
-              text-align: left;
-              text-transform: uppercase; }
-          .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr td {
-            padding: 0px 15px;
-            line-height: 80px;
-            font-weight: bold;
-            font-size: 16px; }
-          .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr:nth-child(odd) {
-            background: #fff; }
-          .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr:nth-child(even) {
-            background: #F1F1F1; }
-          @media (max-width: 767px) {
-            .main-detail .main-content .research-university .group-research-ranking .table-ranking thead {
-              display: none; }
-            .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody, .main-detail .main-content .research-university .group-research-ranking .table-ranking tr, .main-detail .main-content .research-university .group-research-ranking .table-ranking td {
-              display: block;
-              width: 100%; }
-            .main-detail .main-content .research-university .group-research-ranking .table-ranking tr {
-              margin-bottom: 15px;
-              background: #F1F1F1 !important;
-              padding: 10px 0px; }
-            .main-detail .main-content .research-university .group-research-ranking .table-ranking tbody tr td {
-              text-align: right;
-              padding-left: 40%;
-              position: relative;
-              line-height: 20px;
-              padding-top: 10px;
-              padding-bottom: 10px; }
-            .main-detail .main-content .research-university .group-research-ranking .table-ranking td:before {
-              content: attr(data-label);
-              position: absolute;
-              left: 0;
-              width: 40%;
-              font-weight: bold;
-              line-height: 20px;
-              top: calc(50% - 10px); } }
       .main-detail .main-content .research-university.applied-university .content-title {
         color: #C1272D; }
       .main-detail .main-content .research-university.applied-university .table-ranking thead tr {
         background: #E12125; }
         .main-detail .main-content .research-university.applied-university .table-ranking thead tr th {
           color: #fff; }
+    .main-detail .main-content .university-ranking .box-filter {
+      background: #F1F1F1;
+      padding: 40px 30px;
+      display: flex;
+      /* FAKE SELECT */ }
+      .main-detail .main-content .university-ranking .box-filter details {
+        position: relative;
+        width: 293px; }
+      .main-detail .main-content .university-ranking .box-filter details[open] {
+        z-index: 1; }
+      .main-detail .main-content .university-ranking .box-filter summary {
+        cursor: pointer;
+        background-color: #fff;
+        list-style: none;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 15px;
+        color: #989898; }
+      .main-detail .main-content .university-ranking .box-filter summary::-webkit-details-marker {
+        display: none; }
+      .main-detail .main-content .university-ranking .box-filter details[open] summary:before {
+        content: '';
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0; }
+      .main-detail .main-content .university-ranking .box-filter summary:after {
+        content: '';
+        display: inline-block;
+        float: right;
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        right: 15px;
+        top: 18px;
+        border-bottom: 1px solid #989898;
+        border-left: 1px solid #989898;
+        transform: rotate(135deg) translate(50%, 0%);
+        transform-origin: center center;
+        transition: transform ease-in-out 100ms; }
+      .main-detail .main-content .university-ranking .box-filter summary:focus {
+        outline: none; }
+      .main-detail .main-content .university-ranking .box-filter details[open] summary:after {
+        transform: rotate(-45deg) translate(0%, 0%); }
+      .main-detail .main-content .university-ranking .box-filter ul {
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: calc(100% + .5rem);
+        left: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        max-height: 200px;
+        overflow-y: auto; }
+      .main-detail .main-content .university-ranking .box-filter li {
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+        list-style: none;
+        cursor: pointer; }
+        .main-detail .main-content .university-ranking .box-filter li:hover {
+          background: #CDF1BC; }
+      .main-detail .main-content .university-ranking .box-filter li:first-child {
+        padding-top: 15px; }
+      .main-detail .main-content .university-ranking .box-filter li:last-child {
+        padding-bottom: 15px;
+        border-bottom: none; }
+      .main-detail .main-content .university-ranking .box-filter summary.radios {
+        counter-reset: radios; }
+      .main-detail .main-content .university-ranking .box-filter input[type=radio] {
+        counter-increment: radios;
+        appearance: none;
+        display: none; }
+      .main-detail .main-content .university-ranking .box-filter input[type=radio]:checked {
+        display: inline; }
+      .main-detail .main-content .university-ranking .box-filter input[type=radio]:after {
+        content: attr(title);
+        display: inline;
+        font-size: 1rem; }
+      .main-detail .main-content .university-ranking .box-filter ul.list {
+        counter-reset: labels; }
+      .main-detail .main-content .university-ranking .box-filter label {
+        width: 100%;
+        display: block;
+        cursor: pointer; }
+      .main-detail .main-content .university-ranking .box-filter ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #989898;
+        opacity: 1;
+        /* Firefox */ }
+      .main-detail .main-content .university-ranking .box-filter :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #989898; }
+      .main-detail .main-content .university-ranking .box-filter ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #989898; }
+      .main-detail .main-content .university-ranking .box-filter .input-filter {
+        margin-left: 20px;
+        padding-left: 15px;
+        height: 50px; }
+    .main-detail .main-content .university-ranking .box-paging {
+      margin-top: 40px; }
+      .main-detail .main-content .university-ranking .box-paging .result span {
+        font-size: 14px; }
+      .main-detail .main-content .university-ranking .box-paging .result select {
+        border: 1px solid #E5E5E5;
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 20px; }
+      .main-detail .main-content .university-ranking .box-paging .paging {
+        text-align: right; }
+        .main-detail .main-content .university-ranking .box-paging .paging .item-paging {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          margin-left: 5.4px;
+          background: #F1F1F1;
+          line-height: 30px;
+          text-align: center; }
+          .main-detail .main-content .university-ranking .box-paging .paging .item-paging.active {
+            background: #006837;
+            color: #fff; }
+    .main-detail .main-content .box-no-padding {
+      padding: 0;
+      margin: 100px 0px;
+      background: #E4E4E4; }
+      .main-detail .main-content .box-no-padding .box-article {
+        background: #E4E4E4; }
+        .main-detail .main-content .box-no-padding .box-article .row-article {
+          display: grid;
+          grid-auto-flow: column;
+          gap: 20px; }
+        .main-detail .main-content .box-no-padding .box-article .col-article {
+          background: #fff; }
+          .main-detail .main-content .box-no-padding .box-article .col-article .content {
+            padding: 40px;
+            position: relative; }
+            .main-detail .main-content .box-no-padding .box-article .col-article .content:after {
+              content: '';
+              position: absolute;
+              display: inline-block;
+              width: 0;
+              height: 0;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-top: 20px solid #fff;
+              bottom: -20px;
+              left: 40px; }
+            .main-detail .main-content .box-no-padding .box-article .col-article .content .ar-time {
+              font-size: 12px;
+              font-weight: bold; }
+            .main-detail .main-content .box-no-padding .box-article .col-article .content .ar-title {
+              font-size: 16px;
+              font-weight: bold;
+              margin-top: 33px; }
+            .main-detail .main-content .box-no-padding .box-article .col-article .content .hr {
+              height: 2px;
+              width: 53px;
+              background: #CBCBCB;
+              margin-top: 26px; }
+            .main-detail .main-content .box-no-padding .box-article .col-article .content .ar-content {
+              font-size: 12px;
+              font-weight: 300;
+              margin-top: 27px; }
+            .main-detail .main-content .box-no-padding .box-article .col-article .content .ar-readmore {
+              margin-top: 20px; }
+              .main-detail .main-content .box-no-padding .box-article .col-article .content .ar-readmore a {
+                color: #B2B2B2;
+                font-size: 12px;
+                font-weight: bold; }
+          .main-detail .main-content .box-no-padding .box-article .col-article .img img {
+            width: 100%; }
 
 .box-star-rating {
   width: 50px;
@@ -1360,3 +1503,55 @@ p {
     line-height: 17px;
     font-size: 11px;
     margin: 0; }
+
+.group-research-ranking {
+  margin-top: 30px; }
+  .group-research-ranking .table-ranking {
+    width: 100%; }
+    .group-research-ranking .table-ranking thead tr {
+      background: #CDF1BC; }
+      .group-research-ranking .table-ranking thead tr th {
+        color: #006837;
+        height: 50px;
+        padding: 0px 15px;
+        line-height: 50px;
+        text-align: left;
+        text-transform: uppercase; }
+        .group-research-ranking .table-ranking thead tr th.right-score {
+          text-align: right; }
+    .group-research-ranking .table-ranking tbody tr td {
+      padding: 0px 15px;
+      line-height: 80px;
+      font-weight: bold;
+      font-size: 16px; }
+      .group-research-ranking .table-ranking tbody tr td.right-score {
+        text-align: right; }
+    .group-research-ranking .table-ranking tbody tr:nth-child(odd) {
+      background: #fff; }
+    .group-research-ranking .table-ranking tbody tr:nth-child(even) {
+      background: #F1F1F1; }
+    @media (max-width: 767px) {
+      .group-research-ranking .table-ranking thead {
+        display: none; }
+      .group-research-ranking .table-ranking tbody, .group-research-ranking .table-ranking tr, .group-research-ranking .table-ranking td {
+        display: block;
+        width: 100%; }
+      .group-research-ranking .table-ranking tr {
+        margin-bottom: 15px;
+        background: #F1F1F1 !important;
+        padding: 10px 0px; }
+      .group-research-ranking .table-ranking tbody tr td {
+        text-align: right;
+        padding-left: 40%;
+        position: relative;
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+      .group-research-ranking .table-ranking td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 40%;
+        font-weight: bold;
+        line-height: 20px;
+        top: calc(50% - 10px); } }
