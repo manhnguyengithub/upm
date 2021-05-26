@@ -1396,18 +1396,18 @@ p {
         margin-left: 20px;
         padding-left: 15px;
         height: 50px; }
-    .main-detail .main-content .university-ranking .box-paging {
+    .main-detail .main-content .box-paging {
       margin-top: 40px; }
-      .main-detail .main-content .university-ranking .box-paging .result span {
+      .main-detail .main-content .box-paging .result span {
         font-size: 14px; }
-      .main-detail .main-content .university-ranking .box-paging .result select {
+      .main-detail .main-content .box-paging .result select {
         border: 1px solid #E5E5E5;
         display: inline-block;
         margin-left: 15px;
         margin-right: 20px; }
-      .main-detail .main-content .university-ranking .box-paging .paging {
+      .main-detail .main-content .box-paging .paging {
         text-align: right; }
-        .main-detail .main-content .university-ranking .box-paging .paging .item-paging {
+        .main-detail .main-content .box-paging .paging .item-paging {
           display: inline-block;
           height: 30px;
           width: 30px;
@@ -1415,18 +1415,20 @@ p {
           background: #F1F1F1;
           line-height: 30px;
           text-align: center; }
-          .main-detail .main-content .university-ranking .box-paging .paging .item-paging.active {
+          .main-detail .main-content .box-paging .paging .item-paging.active {
             background: #006837;
             color: #fff; }
     .main-detail .main-content .box-no-padding {
       padding: 0;
       margin: 100px 0px;
       background: #E4E4E4; }
+      .main-detail .main-content .box-no-padding.box-news {
+        margin: 0; }
       .main-detail .main-content .box-no-padding .box-article {
         background: #E4E4E4; }
         .main-detail .main-content .box-no-padding .box-article .row-article {
           display: grid;
-          grid-auto-flow: column;
+          grid-template-columns: 33.33% 33.33% 33.34%;
           gap: 20px; }
         .main-detail .main-content .box-no-padding .box-article .col-article {
           background: #fff; }
@@ -1468,6 +1470,40 @@ p {
                 font-weight: bold; }
           .main-detail .main-content .box-no-padding .box-article .col-article .img img {
             width: 100%; }
+    .main-detail .main-content .box-related {
+      display: flex;
+      height: 200px; }
+      .main-detail .main-content .box-related img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; }
+      .main-detail .main-content .box-related .box-text {
+        width: calc(100% - 200px);
+        padding: 30px;
+        background: #fff; }
+        .main-detail .main-content .box-related .box-text .title {
+          font-weight: bold; }
+        .main-detail .main-content .box-related .box-text .content {
+          font-size: 12px;
+          font-weight: 300; }
+        .main-detail .main-content .box-related .box-text .readmore {
+          margin-top: 10px; }
+          .main-detail .main-content .box-related .box-text .readmore a {
+            color: #B2B2B2;
+            font-weight: bold;
+            font-size: 12px; }
+      .main-detail .main-content .box-related.box2 img {
+        width: 50%; }
+      .main-detail .main-content .box-related.box2 .box-text {
+        width: 50%;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center; }
+        .main-detail .main-content .box-related.box2 .box-text img {
+          object-fit: unset;
+          height: auto;
+          width: auto; }
 
 .box-star-rating {
   width: 50px;

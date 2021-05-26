@@ -1597,61 +1597,62 @@ body {
                 }
             }
 
-            .box-paging {
-                margin-top: 40px;
+        }
+        .box-paging {
+            margin-top: 40px;
 
-                .result {
-                    span {
-                        font-size: 14px;
-                    }
-
-                    select {
-                        border: 1px solid #E5E5E5;
-                        display: inline-block;
-                        margin-left: 15px;
-                        margin-right: 20px;
-                    }
+            .result {
+                span {
+                    font-size: 14px;
                 }
 
-                .paging {
-                    text-align: right;
-
-                    .item-paging {
-                        display: inline-block;
-                        height: 30px;
-                        width: 30px;
-                        margin-left: 5.4px;
-                        background: #F1F1F1;
-                        line-height: 30px;
-                        text-align: center;
-
-                        &.active {
-                            background: $brand-color2;
-                            color: #fff;
-                        }
-                    }
+                select {
+                    border: 1px solid #E5E5E5;
+                    display: inline-block;
+                    margin-left: 15px;
+                    margin-right: 20px;
                 }
             }
 
+            .paging {
+                text-align: right;
+
+                .item-paging {
+                    display: inline-block;
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 5.4px;
+                    background: #F1F1F1;
+                    line-height: 30px;
+                    text-align: center;
+
+                    &.active {
+                        background: $brand-color2;
+                        color: #fff;
+                    }
+                }
+            }
         }
 
         .box-no-padding {
             padding: 0;
             margin: 100px 0px;
             background: #E4E4E4;
+            &.box-news{
+                margin: 0;
+            }
 
             .box-article {
                 background: #E4E4E4;
 
                 .row-article {
                     display: grid;
-                    grid-auto-flow: column;
+                    grid-template-columns: 33.33% 33.33% 33.34%;
                     gap: 20px;
                 }
 
                 .col-article {
                     background: #fff;
-                    //max-width: 33%;
 
                     .content {
                         padding: 40px;
@@ -1705,6 +1706,56 @@ body {
                         img {
                             width: 100%;
                         }
+                    }
+                }
+            }
+        }
+        //page 6
+        .box-news{
+
+        }
+        .box-related{
+            display: flex;
+            height: 200px;
+            img{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+            }
+            .box-text{
+                width: calc(100% - 200px);
+                padding: 30px;
+                background: #fff;
+                .title{
+                    font-weight: bold;
+                }
+                .content{
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+                .readmore{
+                    margin-top: 10px;
+                    a{
+                        color: #B2B2B2;
+                        font-weight: bold;
+                        font-size: 12px;
+                    }
+                }
+            }
+            &.box2{
+                img{
+                    width: 50%;
+                }
+                .box-text{
+                    width: 50%;
+                    display: flex;
+                    padding: 0;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        object-fit: unset;
+                        height: auto;
+                        width: auto;
                     }
                 }
             }
