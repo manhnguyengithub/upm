@@ -156,13 +156,15 @@ body {
 
             a {
                 line-height: 80px;
+                display: inline-block;
+                img {
+                    max-width: 145px;
+                }
                 @media(max-width: 991px) {
                     line-height: 50px;
-                }
-                display: inline-block;
-
-                img {
-                    max-width: 93px;
+                    img{
+                        max-width: 100px;
+                    }
                 }
             }
         }
@@ -193,6 +195,27 @@ body {
                     }
                 }
             }
+            .sub-menu{
+                background: rgba(255,255,255,.9);
+                li{
+                    padding: 13px 0;
+                    .sub-link{
+                        color: #666666;
+                        font-weight: 500;
+                        padding: 0px 15px;
+                        border-bottom: 1px solid rgba(0,0,0,.2);
+                        &:last-of-type{
+                            border: 0;
+                        }
+
+                    }
+                    &:hover{
+                        .sub-link{
+                            color: $brand-color1;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -206,7 +229,7 @@ body {
         background: #005036;
         border-top: 5px solid rgba(247, 147, 30, .5);
         padding: 50px 30px;
-        z-index: 1;
+        z-index: 0;
         @media(max-width: 1199px) {
             padding: 20px;
         }
@@ -427,10 +450,21 @@ body {
                 display: inline-block;
 
                 .title-img {
+                    position: absolute;
+                    top: 10px;
+
                     img {
                         width: 25px;
                         height: 15px;
 
+                    }
+
+                    &:first-child {
+                        left: -22px;
+                    }
+
+                    &:last-child {
+                        right: -22px;
                     }
                 }
 
@@ -759,10 +793,11 @@ body {
             text-transform: uppercase;
             padding: 0 0 0 28px;
 
-            &.active {
+            &.active, &:hover {
                 font-weight: bold;
                 color: $brand-color1;
             }
+
         }
 
         .sub-link {
@@ -1342,6 +1377,7 @@ body {
 
                         .percent {
                             margin-top: 15px;
+
                             .ranking-name {
                                 font-size: 10px;
                                 font-weight: 300;
@@ -1365,16 +1401,19 @@ body {
                                         background: #879954;
                                     }
                                 }
+
                                 &.ranking1 {
                                     &:before {
                                         background: $color-logo1;
                                     }
                                 }
+
                                 &.ranking2 {
                                     &:before {
                                         background: $color-logo2;
                                     }
                                 }
+
                                 &.ranking3 {
                                     &:before {
                                         background: $color-logo3;
@@ -1770,7 +1809,7 @@ body {
 
                 .row-article {
                     display: grid;
-                    grid-template-columns: 33.33% 33.33% 33.34%;
+                    grid-template-columns: calc(33.33% - 12px) calc(33.33% - 12px) calc(33.33% - 12px);
                     gap: 20px;
                 }
 
