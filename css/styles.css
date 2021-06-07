@@ -1170,34 +1170,125 @@ p {
               transform: rotate(180deg); }
             .main-detail .main-content .upm-university .group-progress .item-progress .box-progress .ko-progress-circle[data-progress='100'] .ko-progress-circle__fill.ko-progress-circle__bar {
               transform: rotate(360deg); }
+          .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut {
+            display: flex;
+            justify-content: center; }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut {
+              --donut-size: 110px;
+              --donut-border-width: 10px;
+              --donut-spacing: 0;
+              --donut-spacing-color: 255, 255, 255;
+              --donut-spacing-deg: calc(1deg * var(--donut-spacing));
+              border-radius: 50%;
+              height: var(--donut-size);
+              margin-top: 20px;
+              margin-bottom: 5px;
+              position: relative;
+              width: var(--donut-size); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice {
+              height: 100%;
+              position: absolute;
+              width: 100%; }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice::before,
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice::after {
+              border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+              border-radius: 50%;
+              content: '';
+              height: 100%;
+              left: 0;
+              position: absolute;
+              top: 0;
+              transform: rotate(45deg);
+              width: 100%; }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice::before {
+              border-width: calc(var(--donut-border-width) + 1px);
+              box-shadow: 0 0 1px 0 rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing))); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__first {
+              --first-start: 0; }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__first::before {
+              border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+              transform: rotate(calc(360deg * var(--first-start) + 45deg)); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__first::after {
+              border-top-color: #008035;
+              border-right-color: rgba(0, 128, 53, calc(100 * (var(--first) - .25)));
+              border-bottom-color: rgba(0, 128, 53, calc(100 * (var(--first) - .5)));
+              border-left-color: rgba(0, 128, 53, calc(100 * (var(--first) - .75)));
+              transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg))); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__second {
+              --second-start: calc(var(--first));
+              --second-check: max(calc(var(--second-start) - .5), 0);
+              clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__second::before {
+              border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+              transform: rotate(calc(360deg * var(--second-start) + 45deg)); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__second::after {
+              border-top-color: #fe7700;
+              border-right-color: rgba(254, 119, 0, calc(100 * (var(--second) - .25)));
+              border-bottom-color: rgba(254, 119, 0, calc(100 * (var(--second) - .5)));
+              border-left-color: rgba(254, 119, 0, calc(100 * (var(--second) - .75)));
+              transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg))); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__third {
+              --third-start: calc(var(--first) + var(--second));
+              --third-check: max(calc(var(--third-start) - .5), 0);
+              clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__third::before {
+              border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+              transform: rotate(calc(360deg * var(--third-start) + 45deg)); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__third::after {
+              border-top-color: #df0001;
+              border-right-color: rgba(223, 0, 1, calc(100 * (var(--third) - .25)));
+              border-bottom-color: rgba(223, 0, 1, calc(100 * (var(--third) - .5)));
+              border-left-color: rgba(223, 0, 1, calc(100 * (var(--third) - .75)));
+              transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg))); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__fourth {
+              --fourth-start: calc(var(--first) + var(--second) + var(--third));
+              --fourth-check: max(calc(var(--fourth-start) - .5), 0);
+              clip-path: inset(0 calc(50% * (var(--fourth-check) / var(--fourth-check))) 0 0); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__fourth::before {
+              border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+              transform: rotate(calc(360deg * var(--fourth-start) + 45deg)); }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice__fourth::after {
+              border-top-color: #c9c9c9;
+              border-right-color: rgba(201, 201, 201, calc(100 * (var(--fourth) - .25)));
+              border-bottom-color: rgba(201, 201, 201, calc(100 * (var(--fourth) - .5)));
+              border-left-color: rgba(201, 201, 201, calc(100 * (var(--fourth) - .75)));
+              transform: rotate(calc(360deg * var(--fourth-start) + 45deg + var(--donut-spacing-deg))); }
           .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .row {
             margin: 0; }
             .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .row .col-6 {
               padding: 0; }
               .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .row .col-6:first-child {
                 padding-right: 5px; }
-          .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name {
-            font-size: 10px;
-            font-weight: 300;
-            padding-left: 20px;
-            position: relative; }
-            .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name:before {
-              width: 15px;
-              height: 15px;
-              border-radius: 15px;
-              display: inline-block;
-              content: '';
-              background: #C9C9C9;
-              left: 0;
-              position: absolute; }
-            .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name.ranking-active:before {
-              background: #879954; }
-          .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-percent {
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 6px;
-            padding-left: 20px;
-            line-height: 1; }
+          .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent {
+            margin-top: 15px; }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name {
+              font-size: 10px;
+              font-weight: 300;
+              padding-left: 20px;
+              position: relative; }
+              .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name:before {
+                width: 15px;
+                height: 15px;
+                border-radius: 15px;
+                display: inline-block;
+                content: '';
+                background: #C9C9C9;
+                left: 0;
+                position: absolute; }
+              .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name.ranking-active:before {
+                background: #879954; }
+              .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name.ranking1:before {
+                background: #008035; }
+              .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name.ranking2:before {
+                background: #fe7700; }
+              .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name.ranking3:before {
+                background: #df0001; }
+            .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-percent {
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 6px;
+              padding-left: 20px;
+              line-height: 1; }
     .main-detail .main-content .box-overview {
       padding-bottom: 50px; }
       .main-detail .main-content .box-overview h3 {
