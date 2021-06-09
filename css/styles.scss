@@ -100,6 +100,7 @@ body {
                 border: 0;
                 background: #ccc;
                 margin: 0px 15px;
+                z-index: 1;
 
                 &.active {
                     background: #fff;
@@ -146,7 +147,7 @@ body {
         left: 0;
         height: 80px;
         background: rgba(0, 104, 55, .8);
-        z-index: 1;
+        z-index: 16;
         @media(max-width: 991px) {
             height: 50px;
         }
@@ -157,12 +158,14 @@ body {
             a {
                 line-height: 80px;
                 display: inline-block;
+
                 img {
                     max-width: 145px;
                 }
+
                 @media(max-width: 991px) {
                     line-height: 50px;
-                    img{
+                    img {
                         max-width: 100px;
                     }
                 }
@@ -170,51 +173,57 @@ body {
         }
 
         .box-menu {
-            .navbar {
-                padding: 0;
-                height: 80px;
-                text-align: right;
-                @media(max-width: 991px) {
-                    height: 50px;
-                }
 
-                .navbar-collapse {
-                    width: 100%;
-                    z-index: 1;
-
-                    ul {
-                        width: 100%;
-
-                        li {
-                            background: rgba(0, 0, 0, .8);
-
-                            a {
-                                color: #fff;
-                            }
-                        }
+            .sub-menu {
+                background: rgba(255, 255, 255, .9);
+                border-radius: 5px;
+                top: 70px;
+                &:before {
+                    position: absolute;
+                    top: -15px;
+                    left: 15px;
+                    content: '';
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-bottom: 15px solid rgba(255, 255, 255, .9);
+                    @media(max-width: 991px){
+                        display: none;
                     }
                 }
-            }
-            .sub-menu{
-                background: rgba(255,255,255,.9);
-                li{
-                    padding: 13px 0;
-                    .sub-link{
+
+                li {
+                    padding: 0 13px;
+
+                    .sub-link {
                         color: #666666;
                         font-weight: 500;
-                        padding: 0px 15px;
-                        border-bottom: 1px solid rgba(0,0,0,.2);
-                        &:last-of-type{
-                            border: 0;
+                        padding: 15px 0;
+                        border-bottom: 1px solid rgba(0, 0, 0, .2) !important;
+
+                        &:last-of-type {
+                            //border: 0 !important;
                         }
 
+
                     }
-                    &:hover{
-                        .sub-link{
+
+                    &:hover {
+                        background: transparent;
+
+                        .sub-link {
                             color: $brand-color1;
                         }
                     }
                 }
+            }
+            @media(max-width: 991px){
+                position: absolute;
+                left: -15px;
+                background: #006D2B;
+                z-index: 2;
             }
         }
     }
@@ -827,7 +836,7 @@ body {
                 ul {
                     li {
                         &:hover {
-                            background: #000000;
+                            color: $brand-color1;
                         }
                     }
                 }
@@ -920,7 +929,6 @@ body {
                     ul {
                         a {
                             padding: 0 80px;
-                            background-color: #000000;
                             padding: 14px 20px;
                             color: #FFF;
                             font-size: 17px;
@@ -970,7 +978,7 @@ body {
             border: none;
 
             &:hover {
-                background-color: #000000;
+                color: $brand-color1;
             }
         }
         .menu {
