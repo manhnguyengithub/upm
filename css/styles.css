@@ -134,7 +134,6 @@ p {
             color: #F7931E; }
     @media (max-width: 991px) {
       .banner .header .box-menu {
-        display: none;
         position: absolute;
         left: -15px;
         background: #006D2B;
