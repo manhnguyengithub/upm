@@ -4,6 +4,9 @@
     border: 0;
     outline: none;
     font-size: 14px;
+    @media(max-width: 767px){
+        font-size: 13px;
+    }
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
@@ -220,11 +223,45 @@ body {
                 }
             }
             @media(max-width: 991px){
+                display: none;
                 position: absolute;
                 left: -15px;
                 background: #006D2B;
                 z-index: 2;
+                width: 310px;
+                label{
+                    text-transform: uppercase;
+                }
+                .icon-menu{
+                    position: absolute;
+                    right: calc(315px - 100vw);
+                    background: transparent;
+                    cursor: pointer;
+                }
+                .header, .toggle{
+                    background: transparent;
+                }
+                .sub-menu{
+                    background: transparent;
+                    li{
+                        background: transparent;
+                        padding-left: 40px;
+                        .sub-link{
+                            background: transparent;
+                            color: #fff;
+
+                            &:hover{
+                                color: $brand-color1;
+                            }
+                        }
+                    }
+                }
+                .menu-link{
+                    padding-left: 20px;
+                }
+
             }
+
         }
     }
 
@@ -1021,6 +1058,9 @@ body {
 
     .main-content {
         margin-top: -300px;
+        @media(max-width: 1300px){
+            margin-top: -200px;
+        }
         @media(max-width: 767px) {
             margin-top: -80px;
         }
@@ -1155,6 +1195,15 @@ body {
                 left: 50px;
                 padding: 21px 20px;
                 background: #fff;
+                @media(max-width: 767px){
+                    padding: 10px;
+                    left: 10px;
+                    bottom: 10px;
+                    img{
+                        width: 60px;
+
+                    }
+                }
 
             }
 
@@ -1163,11 +1212,17 @@ body {
         .upm-university {
             padding-bottom: 50px;
             border-bottom: 2px solid #E2E2E2;
-
+            @media (max-width: 991px) {
+                padding-bottom: 20px;
+            }
             .uni-address {
                 position: relative;
                 padding-left: 28px;
                 margin-top: 43px;
+                color: #333333;
+                @media(max-width: 991px){
+                    margin-top: 15px;
+                }
 
                 svg {
                     position: absolute;
@@ -1176,13 +1231,12 @@ body {
                 }
             }
 
-            .uni-address {
-                color: #333333;
-            }
-
             .overall-rating {
                 color: #969696;
                 margin-top: 26px;
+                @media(max-width: 991px){
+                    margin-top: 15px;
+                }
             }
 
             .box-star-rating {
@@ -1193,7 +1247,9 @@ body {
 
             .group-progress {
                 display: flex;
-
+                @media(max-width: 991px){
+                    display: block;
+                }
                 .item-progress {
                     flex: 1 1 auto;
                     border: 1px solid #E3E3E3;
@@ -1201,6 +1257,11 @@ body {
                     min-height: 100px;
                     max-width: 25%;
                     margin-left: 15px;
+                    @media(max-width: 991px){
+                        max-width: 100%;
+                        margin-left: 0;
+                        margin-bottom: 15px;
+                    }
 
                     &:first-child {
                         margin-left: 0;
@@ -1476,6 +1537,9 @@ body {
 
                 &.evaluation {
                     margin-top: 75px;
+                    @media(max-width: 991px){
+                        margin-top: 30px;
+                    }
                 }
             }
 
@@ -1519,7 +1583,9 @@ body {
                     align-items: center;
                     border-bottom: 1px solid #E3E3E3;
                     padding: 14px 0;
-
+                    @media(max-width: 991px){
+                        display: block;
+                    }
                     .title {
                         flex: 5;
 
@@ -1530,6 +1596,9 @@ body {
 
                     .rating {
                         flex: 1;
+                        @media(max-width: 991px){
+                            margin: 10px 0;
+                        }
                     }
 
                     .box-bar {
@@ -1611,7 +1680,10 @@ body {
                 background: #F1F1F1;
                 padding: 40px 30px;
                 display: flex;
-
+                @media(max-width: 991px){
+                    display: block;
+                    padding: 15px;
+                }
                 details {
                     position: relative;
                     width: 293px;
@@ -1760,8 +1832,23 @@ body {
 
                 .input-filter {
                     margin-left: 20px;
-                    padding-left: 15px;
+                    padding: 0 15px;
                     height: 50px;
+                    &.uni-select{
+                        padding: 0;
+                    }
+                    @media(max-width: 991px){
+                        width: 100%;
+                        display: block;
+                        margin-left: 0;
+                        margin-bottom: 5px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        &.uni-select{
+                            padding: 0;
+                        }
+                    }
                 }
             }
 
@@ -1769,7 +1856,9 @@ body {
 
         .box-paging {
             margin-top: 40px;
-
+            @media(max-width: 991px){
+                margin-top: 20px;
+            }
             .result {
                 span {
                     font-size: 14px;
@@ -1785,7 +1874,10 @@ body {
 
             .paging {
                 text-align: right;
-
+                @media(max-width: 991px){
+                    text-align: center;
+                    padding-top: 5px;
+                }
                 .item-paging {
                     display: inline-block;
                     height: 30px;
@@ -1819,6 +1911,9 @@ body {
                     display: grid;
                     grid-template-columns: calc(33.33% - 12px) calc(33.33% - 12px) calc(33.33% - 12px);
                     gap: 20px;
+                    @media(max-width: 991px){
+                        grid-template-columns: auto;
+                    }
                 }
 
                 .col-article {
@@ -1896,17 +1991,35 @@ body {
             display: flex;
             height: 200px;
 
+            @media(max-width: 991px){
+                &.box-content{
+                    height: auto;
+                    margin: 20px 0;
+                }
+            }
+            .col-md-6{
+                @media(max-width: 991px){
+                    width: 100%;
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                    margin-top: 10px;
+                }
+            }
+
             img {
                 width: 200px;
                 height: 200px;
                 object-fit: cover;
+
             }
 
             .box-text {
                 width: calc(100% - 200px);
                 padding: 30px;
                 background: #fff;
-
+                @media(max-width: 991px){
+                    padding: 15px;
+                }
                 .title {
                     font-weight: bold;
                 }
@@ -2084,7 +2197,9 @@ body {
         //page 8
         .box-contact-form {
             display: flex;
-
+            @media(max-width: 991px){
+                display: block;
+            }
             .contact-form {
                 flex: 1;
 
@@ -2191,6 +2306,9 @@ body {
                         min-width: 160px;
                         line-height: 50px;
                         text-transform: uppercase;
+                        @media(max-width: 991px){
+                            margin-top: 15px;
+                        }
                     }
                 }
             }
@@ -2198,7 +2316,10 @@ body {
             .img-form {
                 flex: 1;
                 margin-left: 50px;
-
+                @media(max-width: 991px){
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
                 img {
                     max-width: 100%;
                 }
@@ -2210,7 +2331,12 @@ body {
 
             .box-item-contact {
                 text-align: center;
-
+                @media(max-width: 991px){
+                    margin-top:30px;
+                    &:first-child{
+                        //margin-top: 0;
+                    }
+                }
                 svg {
                     width: 100px;
                 }
