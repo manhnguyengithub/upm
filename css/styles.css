@@ -37,6 +37,12 @@ p {
 .full-width {
   width: 100%; }
 
+#banner-slide {
+  margin-top: 80px; }
+  @media (max-width: 991px) {
+    #banner-slide {
+      margin-top: 50px; } }
+
 .banner {
   position: relative; }
   .banner .slide {
@@ -61,8 +67,8 @@ p {
         background: #fff; }
     .banner .slide .carousel-control-next, .banner .slide .carousel-control-prev {
       width: 100px;
-      top: calc(50% + 40px);
-      bottom: calc(50% - 40px); }
+      top: calc(50% - 20px);
+      bottom: calc(50% + 20px); }
     .banner .slide .carousel-control-next {
       right: 442px; }
       @media (max-width: 991px) {
@@ -76,10 +82,17 @@ p {
         .banner .slide .carousel-indicators {
           right: 0; } }
     .banner .slide .carousel-inner .carousel-item {
-      min-height: 442px; }
+      min-height: 300px;
+      max-height: 50vh;
+      padding-right: 442px;
+      background: rgba(0, 0, 0, 0.05); }
       @media (max-width: 1199px) {
         .banner .slide .carousel-inner .carousel-item {
-          min-height: auto; } }
+          min-height: 350px; } }
+      @media (max-width: 991px) {
+        .banner .slide .carousel-inner .carousel-item {
+          min-height: auto;
+          padding-right: 0; } }
   .banner .header {
     position: fixed;
     top: 0;
@@ -163,7 +176,7 @@ p {
   .banner .banner-form {
     position: absolute;
     right: 0;
-    top: 80px;
+    top: 0;
     bottom: 0;
     width: 442px;
     background: #005036;
@@ -172,7 +185,8 @@ p {
     z-index: 0; }
     @media (max-width: 1199px) {
       .banner .banner-form {
-        padding: 20px; } }
+        padding: 20px;
+        top: 0; } }
     @media (max-width: 991px) {
       .banner .banner-form {
         top: 0;
@@ -309,7 +323,7 @@ p {
         left: 0;
         right: 0;
         margin: auto;
-        text-transform: uppercase; }
+        text-transform: capitalize; }
   .group-intro .university {
     padding-top: 80px; }
   .group-intro .stories {
@@ -644,7 +658,9 @@ p {
   .header .menu {
     display: none; }
   .header [id^=drop]:checked + ul {
-    display: block; } }
+    display: block; }
+  .header [id^=drop]:checked + svg {
+    transform: rotate(180deg); } }
 
 @media all and (max-width: 330px) {
   .header nav ul li {
@@ -1486,6 +1502,11 @@ p {
         .main-detail .main-content .university-ranking .box-filter {
           display: block;
           padding: 15px; } }
+      .main-detail .main-content .university-ranking .box-filter .multiselect__tags {
+        height: 50px;
+        border-radius: 0;
+        margin-bottom: 4px;
+        border: 0; }
       .main-detail .main-content .university-ranking .box-filter details {
         position: relative;
         width: 293px; }
@@ -1518,7 +1539,7 @@ p {
         height: 7px;
         position: absolute;
         right: 15px;
-        top: 18px;
+        top: 21px;
         border-bottom: 1px solid #989898;
         border-left: 1px solid #989898;
         transform: rotate(135deg) translate(50%, 0%);
@@ -1581,10 +1602,15 @@ p {
       .main-detail .main-content .university-ranking .box-filter ::-ms-input-placeholder {
         /* Microsoft Edge */
         color: #989898; }
+      .main-detail .main-content .university-ranking .box-filter .multiselect {
+        flex: 1; }
       .main-detail .main-content .university-ranking .box-filter .input-filter {
         margin-left: 20px;
         padding: 0 15px;
-        height: 50px; }
+        height: 50px;
+        flex: 1; }
+        .main-detail .main-content .university-ranking .box-filter .input-filter:first-child {
+          margin-left: 0; }
         .main-detail .main-content .university-ranking .box-filter .input-filter.uni-select {
           padding: 0; }
         @media (max-width: 991px) {
@@ -1615,6 +1641,8 @@ p {
           .main-detail .main-content .box-paging .paging {
             text-align: center;
             padding-top: 5px; } }
+        .main-detail .main-content .box-paging .paging .VuePagination nav {
+          display: inline-block; }
         .main-detail .main-content .box-paging .paging .item-paging {
           display: inline-block;
           height: 30px;
