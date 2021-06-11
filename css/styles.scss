@@ -1925,10 +1925,27 @@ body {
                 .VuePagination{
                     nav{
                         display: inline-block;
+                        ul{
+                            li{
+                                a{
+                                    padding: 0;
+                                    text-align: center;
+                                    height: 30px;
+                                    width: 30px;
+                                    line-height: 30px;
+                                    margin-left: 5.4px;
+                                    background: #F1F1F1;
+                                    &.active {
+                                        background: $brand-color2;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
-                .item-paging {
+                .item-paging, .page-link  {
                     display: inline-block;
                     height: 30px;
                     width: 30px;
