@@ -14,6 +14,26 @@
   .container {
     max-width: 1170px; } }
 
+.max-width-100 {
+  max-width: 100%; }
+
+.only-one-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.only-two-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; }
+
+.only-three-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden; }
+
 .custome-scroll {
   /* width */
   /* Track */
@@ -83,7 +103,6 @@ p {
           right: 0; } }
     .banner .slide .carousel-inner .carousel-item {
       min-height: 300px;
-      max-height: 50vh;
       padding-right: 442px;
       background: rgba(0, 0, 0, 0.05); }
       @media (max-width: 1199px) {
@@ -141,6 +160,9 @@ p {
           font-weight: 500;
           padding: 15px 0;
           border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important; }
+          @media (max-width: 991px) {
+            .banner .header .box-menu .sub-menu li .sub-link {
+              border-bottom: 1px solid #0B7F35 !important; } }
         .banner .header .box-menu .sub-menu li:hover {
           background: transparent; }
           .banner .header .box-menu .sub-menu li:hover .sub-link {
@@ -148,10 +170,11 @@ p {
     @media (max-width: 991px) {
       .banner .header .box-menu {
         position: absolute;
-        left: -15px;
+        left: 0;
         background: #006D2B;
         z-index: 2;
-        width: 310px; }
+        width: 310px;
+        padding-left: 20px; }
         .banner .header .box-menu label {
           text-transform: uppercase; }
         .banner .header .box-menu .icon-menu {
@@ -164,15 +187,15 @@ p {
         .banner .header .box-menu .sub-menu {
           background: transparent; }
           .banner .header .box-menu .sub-menu li {
-            background: transparent;
-            padding-left: 40px; }
+            background: transparent; }
             .banner .header .box-menu .sub-menu li .sub-link {
               background: transparent;
-              color: #fff; }
+              color: #fff;
+              padding-left: 0px; }
               .banner .header .box-menu .sub-menu li .sub-link:hover {
                 color: #F7931E; }
-        .banner .header .box-menu .menu-link {
-          padding-left: 20px; } }
+        .banner .header .box-menu .menu-link, .banner .header .box-menu .toggle {
+          padding-left: 0px; } }
   .banner .banner-form {
     position: absolute;
     right: 0;
@@ -531,6 +554,11 @@ p {
     margin-left: 25px; }
     .footer .box-social a:first-child {
       margin-left: 0; }
+    @media (max-width: 991px) and (min-width: 768px) {
+      .footer .box-social a {
+        margin-left: 0;
+        width: 40%;
+        padding-bottom: 15px; } }
 
 .copyright {
   height: 50px;
@@ -559,8 +587,19 @@ p {
     text-transform: uppercase;
     padding: 0 0 0 28px; }
     .header nav .menu-link.active, .header nav .menu-link:hover {
-      font-weight: bold;
       color: #F7931E; }
+  .header nav .box-link-logo {
+    height: 120px;
+    line-height: 120px; }
+    .header nav .box-link-logo .link-logo {
+      display: none; }
+      @media (max-width: 991px) {
+        .header nav .box-link-logo .link-logo {
+          display: block;
+          height: 120px;
+          line-height: 120px; }
+          .header nav .box-link-logo .link-logo img {
+            max-width: 92px; } }
   .header nav .sub-link:hover {
     background: transparent; }
   .header nav:after {
@@ -602,8 +641,25 @@ p {
     text-decoration: none; }
     .header nav a:hover {
       color: #F7931E; }
+  @media (max-width: 991px) {
+    .header nav .menu-link, .header nav label.toggle {
+      font-size: 14px;
+      border-bottom: 1px solid #0B7F35;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      padding-top: 0;
+      font-weight: bold; }
+    .header nav .sub-link {
+      font-weight: bold !important;
+      height: 50px;
+      line-height: 50px;
+      font-size: 12px;
+      padding-top: 0 !important;
+      border-bottom: 1px solid #0B7F35 !important;
+      padding-left: 0; } }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 991px) {
   .header nav {
     margin: 0;
     z-index: 99; }
@@ -658,7 +714,12 @@ p {
   .header .menu {
     display: none; }
   .header [id^=drop]:checked + ul {
-    display: block; }
+    display: block; } }
+  @media all and (max-width: 991px) and (max-width: 991px) {
+    .header [id^=drop]:checked + ul.menu {
+      height: 100vh; } }
+
+@media all and (max-width: 991px) {
   .header [id^=drop]:checked + svg {
     transform: rotate(180deg); } }
 
