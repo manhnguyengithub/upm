@@ -511,6 +511,42 @@ p {
               width: 100%;
               height: 100%; }
 
+.partners {
+  padding: 30px 0 50px 0;
+  background: #F2F2F2; }
+  .partners .title-section {
+    text-transform: uppercase;
+    color: #006837;
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+    padding: 0px 28px;
+    text-align: center; }
+  .partners .box-slider {
+    display: flex;
+    position: relative;
+    margin-top: 30px; }
+    .partners .box-slider .control-slider {
+      display: inline-block;
+      position: absolute;
+      top: 65px;
+      left: -20px; }
+      .partners .box-slider .control-slider.next-slider {
+        right: -30px;
+        left: auto; }
+    .partners .box-slider .item {
+      height: 150px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      margin-left: 10px;
+      max-width: 20%;
+      background: #fff; }
+      .partners .box-slider .item img {
+        width: 100%; }
+
 .footer-menu {
   height: 50px;
   background: #E6E6E6; }
@@ -885,14 +921,102 @@ p {
               width: 60px; } }
     .main-detail .main-content .upm-university {
       padding-bottom: 50px;
+      padding-top: 20px;
       border-bottom: 2px solid #E2E2E2; }
+      .main-detail .main-content .upm-university .group-uni-content {
+        display: flex; }
+        @media (max-width: 991px) {
+          .main-detail .main-content .upm-university .group-uni-content {
+            display: block; } }
+        .main-detail .main-content .upm-university .group-uni-content .box-logo-uni {
+          width: 150px;
+          height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 21px 20px;
+          -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2); }
+          @media (max-width: 991px) {
+            .main-detail .main-content .upm-university .group-uni-content .box-logo-uni {
+              display: block;
+              width: 100%;
+              text-align: center;
+              height: auto;
+              box-shadow: none; } }
+          .main-detail .main-content .upm-university .group-uni-content .box-logo-uni .uni-logo {
+            display: block;
+            width: 100%; }
+            .main-detail .main-content .upm-university .group-uni-content .box-logo-uni .uni-logo img {
+              width: 100%; }
+              @media (max-width: 991px) {
+                .main-detail .main-content .upm-university .group-uni-content .box-logo-uni .uni-logo img {
+                  display: inline-block;
+                  width: 150px; } }
+          @media (max-width: 767px) {
+            .main-detail .main-content .upm-university .group-uni-content .box-logo-uni {
+              display: block; } }
+        .main-detail .main-content .upm-university .group-uni-content .box-uni-info {
+          padding-left: 46px;
+          padding-right: 100px;
+          position: relative;
+          flex: 1; }
+          @media (max-width: 991px) {
+            .main-detail .main-content .upm-university .group-uni-content .box-uni-info {
+              padding-left: 0; } }
+          .main-detail .main-content .upm-university .group-uni-content .box-uni-info .nation {
+            font-size: 12px; }
+          .main-detail .main-content .upm-university .group-uni-content .box-uni-info .uni-rating {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 80px; }
+            @media (max-width: 991px) {
+              .main-detail .main-content .upm-university .group-uni-content .box-uni-info .uni-rating {
+                width: 50px; } }
+          .main-detail .main-content .upm-university .group-uni-content .box-uni-info .box-video {
+            display: flex;
+            border-bottom: 1px solid #E1E1E1;
+            padding-bottom: 25px;
+            margin-top: 36px; }
+            @media (max-width: 991px) {
+              .main-detail .main-content .upm-university .group-uni-content .box-uni-info .box-video {
+                margin-top: 15px; } }
+            .main-detail .main-content .upm-university .group-uni-content .box-uni-info .box-video .office-video {
+              height: 30px;
+              min-width: 140px;
+              background: #006837;
+              color: #fff;
+              font-weight: bold;
+              font-size: 14px;
+              text-align: center;
+              line-height: 32px;
+              border-radius: 1.35px; }
+              .main-detail .main-content .upm-university .group-uni-content .box-uni-info .box-video .office-video.video-play {
+                margin-left: 20px;
+                background: #fff;
+                color: #006837;
+                border: 1px solid #006837;
+                position: relative;
+                padding-left: 20px; }
+                .main-detail .main-content .upm-university .group-uni-content .box-uni-info .box-video .office-video.video-play svg {
+                  position: absolute;
+                  left: 20px;
+                  top: 5px;
+                  height: 18px; }
+            .main-detail .main-content .upm-university .group-uni-content .box-uni-info .box-video .youtube-icon {
+              margin-left: 20px;
+              height: 30px;
+              display: inline-block;
+              cursor: pointer; }
       @media (max-width: 991px) {
         .main-detail .main-content .upm-university {
           padding-bottom: 20px; } }
       .main-detail .main-content .upm-university .uni-address {
         position: relative;
         padding-left: 28px;
-        margin-top: 43px;
+        margin-top: 20px;
         color: #333333; }
         @media (max-width: 991px) {
           .main-detail .main-content .upm-university .uni-address {
@@ -915,10 +1039,11 @@ p {
         transform-origin: left top; }
       .main-detail .main-content .upm-university .group-progress {
         display: flex;
-        margin-top: 10px; }
+        margin-top: 60px; }
         @media (max-width: 991px) {
           .main-detail .main-content .upm-university .group-progress {
-            display: block; } }
+            display: block;
+            margin-top: 30px; } }
         .main-detail .main-content .upm-university .group-progress .item-progress {
           flex: 1 1 auto;
           border: 1px solid #E3E3E3;
@@ -1594,6 +1719,29 @@ p {
               font-size: 16px;
               color: #333333;
               padding-left: 20px; }
+    .main-detail .main-content .university-partners {
+      margin-top: 20px;
+      padding-bottom: 30px; }
+      .main-detail .main-content .university-partners .content-title {
+        text-align: center; }
+      .main-detail .main-content .university-partners .group-partners .item-partner {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .main-detail .main-content .university-partners .group-partners .item-partner a {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          padding: 0 20px;
+          margin-top: 20px; }
+          @media (max-width: 767px) {
+            .main-detail .main-content .university-partners .group-partners .item-partner a {
+              padding-bottom: 0px 15px; } }
+          .main-detail .main-content .university-partners .group-partners .item-partner a img {
+            width: 100%; }
+            @media (max-width: 767px) {
+              .main-detail .main-content .university-partners .group-partners .item-partner a img {
+                width: 80%; } }
     .main-detail .main-content .research-university {
       margin-top: 40px; }
       .main-detail .main-content .research-university.applied-university .content-title {

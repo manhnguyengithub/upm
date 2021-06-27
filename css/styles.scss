@@ -769,6 +769,50 @@ body {
     }
 }
 
+.partners {
+    padding: 30px 0 50px 0;
+    background: #F2F2F2;
+    .title-section {
+        text-transform: uppercase;
+        color: $brand-color2;
+        font-size: 32px;
+        font-weight: bold;
+        display: block;
+        padding: 0px 28px;
+        text-align: center;
+    }
+    .box-slider{
+        display: flex;
+        position: relative;
+        margin-top: 30px;
+        .control-slider{
+            display: inline-block;
+            position: absolute;
+            top: 65px;
+            left: -20px;
+            &.next-slider{
+                right: -30px;
+                left: auto;
+            }
+        }
+        .item{
+            height: 150px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            margin-left: 10px;
+            max-width: 20%;
+            background: #fff;
+            img{
+                width: 100%;
+            }
+
+        }
+    }
+}
+
 .footer-menu {
     height: 50px;
     background: #E6E6E6;
@@ -798,6 +842,7 @@ body {
 .footer {
     position: relative;
     overflow: hidden;
+
     .footer-bg {
         position: absolute;
         top: 0;
@@ -1175,9 +1220,10 @@ body {
     position: relative;
     background: #E5E5E5;
     padding-bottom: 80px;
-    @media(max-width: 991px){
+    @media(max-width: 991px) {
         padding-bottom: 30px;
     }
+
     .img-banner {
         position: relative;
         width: 100%;
@@ -1350,7 +1396,108 @@ body {
 
         .upm-university {
             padding-bottom: 50px;
+            padding-top: 20px;
             border-bottom: 2px solid #E2E2E2;
+            .group-uni-content{
+                display: flex;
+                @media(max-width: 991px){
+                    display: block;
+                }
+                .box-logo-uni{
+                    width: 150px;
+                    height: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 21px 20px;
+                    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+                    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+                    @media(max-width: 991px){
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        height: auto;
+                        box-shadow: none;
+                    }
+                    .uni-logo{
+                        display: block;
+                        width: 100%;
+                        img{
+                            width: 100%;
+                            @media(max-width: 991px){
+                                display: inline-block;
+                                width: 150px;
+                            }
+                        }
+                    }
+                    @media(max-width: 767px){
+                        display: block;
+                    }
+                }
+                .box-uni-info{
+                    padding-left: 46px;
+                    padding-right: 100px;
+                    position: relative;
+                    flex: 1;
+                    @media(max-width: 991px){
+                        padding-left: 0;
+                    }
+                    .nation{
+                        font-size: 12px;
+                    }
+                    .uni-rating{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 80px;
+                        @media(max-width: 991px){
+                            width: 50px;
+                        }
+                    }
+                    .box-video{
+                        display: flex;
+                        border-bottom: 1px solid #E1E1E1;
+                        padding-bottom: 25px;
+                        margin-top: 36px;
+                        @media(max-width: 991px){
+                            margin-top: 15px;
+                        }
+                        .office-video{
+                            height: 30px;
+                            min-width: 140px;
+                            background: $brand-color2;
+                            color: #fff;
+                            font-weight: bold;
+                            font-size: 14px;
+                            text-align: center;
+                            line-height: 32px;
+                            border-radius: 1.35px;
+                            &.video-play{
+                                margin-left: 20px;
+                                background: #fff;
+                                color: $brand-color2;
+                                border: 1px solid $brand-color2;
+                                position: relative;
+                                padding-left: 20px;
+                                svg{
+                                    position: absolute;
+                                    left: 20px;
+                                    top: 5px;
+                                    height: 18px;
+                                }
+                            }
+                        }
+                        .youtube-icon{
+                            margin-left: 20px;
+                            height: 30px;
+                            display: inline-block;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
             @media (max-width: 991px) {
                 padding-bottom: 20px;
             }
@@ -1358,7 +1505,7 @@ body {
             .uni-address {
                 position: relative;
                 padding-left: 28px;
-                margin-top: 43px;
+                margin-top: 20px;
                 color: #333333;
                 @media(max-width: 991px) {
                     margin-top: 15px;
@@ -1391,9 +1538,10 @@ body {
 
             .group-progress {
                 display: flex;
-                margin-top: 10px;
+                margin-top: 60px;
                 @media(max-width: 991px) {
                     display: block;
+                    margin-top: 30px;
                 }
 
                 .item-progress {
@@ -1801,6 +1949,38 @@ body {
 
         }
 
+        //university-partners
+        .university-partners{
+            margin-top: 20px;
+            padding-bottom: 30px;
+            .content-title{
+                text-align: center;
+            }
+            .group-partners{
+                .item-partner{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        padding: 0 20px;
+                        margin-top: 20px;
+                        @media(max-width: 767px){
+                            padding-bottom: 0px 15px;
+                        }
+                        img{
+                            width: 100%;
+                            @media(max-width: 767px){
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         //page 4
         .research-university {
             margin-top: 40px;
@@ -2206,7 +2386,8 @@ body {
         //page 6
         .box-news {
             background: transparent;
-            .box-article{
+
+            .box-article {
                 background: transparent;
             }
         }
@@ -2558,6 +2739,7 @@ body {
         .box-contact-map {
             margin-top: 50px;
             padding-bottom: 0;
+
             .box-item-contact {
                 text-align: center;
                 @media(max-width: 991px) {
@@ -2602,7 +2784,7 @@ body {
 
         .box-map {
             margin: 50px -50px 0 -50px;
-            @media(max-width: 991px){
+            @media(max-width: 991px) {
                 margin-left: -15px;
                 margin-right: -15px;
             }
