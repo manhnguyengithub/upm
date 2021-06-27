@@ -769,9 +769,46 @@ body {
     }
 }
 
+.slick-list{
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+}
+.slick-slide{
+    padding: 0px 10px;
+    >div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        background: #fff;
+        >div{
+            text-align: center;
+            display: flex!important;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.slick-arrow{
+
+    height: 41px;
+    background-repeat: no-repeat;
+    &:before{
+        content: '';
+    }
+    &.slick-next{
+        background-image: url('assets/img/slide-right.png');
+    }
+    &.slick-next{
+        background-image: url('assets/img/slide-left.png');
+    }
+}
+
 .partners {
     padding: 30px 0 50px 0;
     background: #F2F2F2;
+
     .title-section {
         text-transform: uppercase;
         color: $brand-color2;

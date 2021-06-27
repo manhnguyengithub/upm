@@ -511,6 +511,34 @@ p {
               width: 100%;
               height: 100%; }
 
+.slick-list {
+  margin-left: -10px !important;
+  margin-right: -10px !important; }
+
+.slick-slide {
+  padding: 0px 10px; }
+  .slick-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background: #fff; }
+    .slick-slide > div > div {
+      text-align: center;
+      display: flex !important;
+      align-items: center;
+      justify-content: center; }
+
+.slick-arrow {
+  height: 41px;
+  background-repeat: no-repeat; }
+  .slick-arrow:before {
+    content: ''; }
+  .slick-arrow.slick-next {
+    background-image: url("assets/img/slide-right.png"); }
+  .slick-arrow.slick-next {
+    background-image: url("assets/img/slide-left.png"); }
+
 .partners {
   padding: 30px 0 50px 0;
   background: #F2F2F2; }
