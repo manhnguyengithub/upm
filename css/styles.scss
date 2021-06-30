@@ -263,8 +263,9 @@ body {
 
                     .sub-link {
                         color: #666666;
-                        font-weight: 500;
+                        text-transform: uppercase;
                         padding: 15px 0;
+                        font-size: 14px;
                         border-bottom: 1px solid rgba(0, 0, 0, .2) !important;
 
                         @media(max-width: 991px) {
@@ -774,13 +775,16 @@ body {
     margin-left: -10px !important;
     margin-right: -10px !important;
 }
+.partners-container{
+    margin-top: 20px;
+}
 .slick-slide{
     padding: 0px 10px;
     >div{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 150px;
+        height: 243px;
         background: #fff;
         >div{
             text-align: center;
@@ -789,7 +793,21 @@ body {
             justify-content: center;
         }
     }
+    .item{
+        a{
+            text-decoration: none;
+        }
+        p{
+            height: 84px;
+            color: #212529;
+            font-weight: 400;
+            padding: 4px;
+            font-size: 13px;
+            color: $brand-color2;
+        }
+    }
 }
+
 
 .slick-arrow{
 
@@ -1113,10 +1131,11 @@ body {
                 font-weight: bold !important;
                 height: 50px;
                 line-height: 50px;
-                font-size: 12px;
+                font-size: 14px;
                 padding-top: 0 !important;
                 border-bottom: 1px solid #0B7F35 !important;
                 padding-left: 0;
+                text-transform: uppercase;
             }
         }
     }
@@ -1860,6 +1879,39 @@ body {
                 font-weight: 300;
                 line-height: 24px;
                 text-align: justify;
+            }
+        }
+        .box-school{
+            border-top: 2px solid #E2E2E2;
+            .group-school{
+                display: flex;
+                flex-wrap: nowrap;
+                margin-top: 20px;
+                .item{
+                    flex: 1;
+                    min-height: 150px;
+                    margin-left: 10px;
+                    width: 33.33%;
+                    color: #fff;
+                    padding: 15px;
+                    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
+                    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
+                    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    .number{
+                        font-size: 18px;
+                        font-weight: bold;
+                        display: block;
+                        text-align: center;
+                        color: rgba(0,0,0,.8);
+                    }
+                    .des{
+                        text-align: center;
+                        color: rgba(0,0,0,.8);
+                    }
+                }
             }
         }
 
