@@ -535,26 +535,33 @@ p {
   .slick-slide .item a {
     text-decoration: none; }
   .slick-slide .item p {
-    height: 84px;
+    min-height: 40px;
+    height: auto !important;
     color: #212529;
     font-weight: 400;
     padding: 4px;
-    font-size: 13px;
+    font-size: 8px;
     color: #006837; }
+    @media (max-width: 991px) {
+      .slick-slide .item p {
+        margin-top: -20px; } }
 
 .slick-arrow {
-  height: 41px;
+  height: 41px !important;
   background-repeat: no-repeat; }
   .slick-arrow:before {
-    content: ''; }
+    content: '' !important; }
   .slick-arrow.slick-next {
-    background-image: url("assets/img/slide-right.png"); }
+    background-image: url("assets/img/slide-right.png") !important; }
   .slick-arrow.slick-prev {
-    background-image: url("assets/img/slide-left.png"); }
+    background-image: url("assets/img/slide-left.png") !important; }
 
 .partners {
   padding: 30px 0 50px 0;
   background: #F2F2F2; }
+  @media (max-width: 991px) {
+    .partners .partners-container {
+      padding: 0px 20px; } }
   .partners .title-section {
     text-transform: uppercase;
     color: #006837;
@@ -571,9 +578,9 @@ p {
       display: inline-block;
       position: absolute;
       top: 65px;
-      left: -20px; }
+      left: -30px !important; }
       .partners .box-slider .control-slider.next-slider {
-        right: -30px;
+        right: -30px !important;
         left: auto; }
     .partners .box-slider .item {
       height: 150px;
@@ -1682,16 +1689,31 @@ p {
         display: flex;
         flex-wrap: nowrap;
         margin-top: 20px; }
+        @media (max-width: 1199px) {
+          .main-detail .main-content .box-school .group-school {
+            flex-wrap: wrap; } }
         .main-detail .main-content .box-school .group-school .item {
           flex: 1;
-          min-height: 150px;
           margin-left: 10px;
           width: 33.33%;
-          color: #fff;
           padding: 15px;
           -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
           -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25); }
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+          background: #006837; }
+          @media (max-width: 1199px) {
+            .main-detail .main-content .box-school .group-school .item {
+              flex: none;
+              width: calc(33.33% - 10px);
+              margin-top: 10px; }
+              .main-detail .main-content .box-school .group-school .item:nth-child(4) {
+                margin-left: 0; } }
+          @media (max-width: 991px) {
+            .main-detail .main-content .box-school .group-school .item {
+              flex: none;
+              width: 100%;
+              margin-left: 0;
+              min-height: auto; } }
           .main-detail .main-content .box-school .group-school .item:first-child {
             margin-left: 0; }
           .main-detail .main-content .box-school .group-school .item .number {
@@ -1699,10 +1721,10 @@ p {
             font-weight: bold;
             display: block;
             text-align: center;
-            color: rgba(0, 0, 0, 0.8); }
+            color: #fff; }
           .main-detail .main-content .box-school .group-school .item .des {
             text-align: center;
-            color: rgba(0, 0, 0, 0.8); }
+            color: #fff; }
     .main-detail .main-content .out-title {
       font-size: 32px;
       font-weight: bold;
@@ -1839,7 +1861,6 @@ p {
       .main-detail .main-content .university-ranking .box-filter .multiselect__tags {
         height: 50px;
         border-radius: 0;
-        margin-bottom: 4px;
         border: 0;
         margin-left: 20px; }
         @media (max-width: 991px) {
@@ -1929,6 +1950,17 @@ p {
         width: 100%;
         display: block;
         cursor: pointer; }
+      .main-detail .main-content .university-ranking .box-filter .uni-select {
+        max-width: 100%;
+        overflow: hidden; }
+        .main-detail .main-content .university-ranking .box-filter .uni-select summary {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 100%;
+          display: inline-block;
+          padding-right: 33px;
+          max-width: 100%; }
       .main-detail .main-content .university-ranking .box-filter ::placeholder {
         /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: #989898;
