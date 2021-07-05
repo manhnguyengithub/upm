@@ -771,62 +771,81 @@ body {
     }
 }
 
-.slick-list{
+.slick-list {
     margin-left: -10px !important;
     margin-right: -10px !important;
 }
-.partners-container{
+
+.partners-container {
     margin-top: 20px;
 }
-.slick-slide{
+
+.slick-slide {
     padding: 0px 10px;
-    >div{
+
+    > div {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 243px;
         background: #fff;
-        >div{
+
+        > div {
             text-align: center;
-            display: flex!important;
+            display: flex !important;
             align-items: center;
             justify-content: center;
         }
     }
-    .item{
-        a{
+
+    .item {
+        a {
             text-decoration: none;
         }
-        p{
-            height: 84px;
+
+        p {
+            min-height: 40px;
+            height: auto !important;
             color: #212529;
             font-weight: 400;
             padding: 4px;
-            font-size: 13px;
+            font-size: 8px;
             color: $brand-color2;
+            @media(max-width: 991px) {
+                margin-top: -20px;
+            }
         }
     }
 }
 
 
-.slick-arrow{
+.slick-arrow {
 
-    height: 41px;
+    height: 41px !important;
     background-repeat: no-repeat;
-    &:before{
-        content: '';
+
+    &:before {
+        content: '' !important;
     }
-    &.slick-next{
-        background-image: url('assets/img/slide-right.png');
+
+    &.slick-next {
+        background-image: url('assets/img/slide-right.png') !important;
     }
-    &.slick-prev{
-        background-image: url('assets/img/slide-left.png');
+
+    &.slick-prev {
+        background-image: url('assets/img/slide-left.png') !important;
     }
 }
 
 .partners {
     padding: 30px 0 50px 0;
     background: #F2F2F2;
+
+    .partners-container {
+        @media(max-width: 991px) {
+            padding: 0px 20px;
+        }
+    }
 
     .title-section {
         text-transform: uppercase;
@@ -837,21 +856,25 @@ body {
         padding: 0px 28px;
         text-align: center;
     }
-    .box-slider{
+
+    .box-slider {
         display: flex;
         position: relative;
         margin-top: 30px;
-        .control-slider{
+
+        .control-slider {
             display: inline-block;
             position: absolute;
             top: 65px;
-            left: -20px;
-            &.next-slider{
-                right: -30px;
+            left: -30px !important;
+
+            &.next-slider {
+                right: -30px !important;
                 left: auto;
             }
         }
-        .item{
+
+        .item {
             height: 150px;
             padding: 40px;
             display: flex;
@@ -861,7 +884,8 @@ body {
             margin-left: 10px;
             max-width: 20%;
             background: #fff;
-            img{
+
+            img {
                 width: 100%;
             }
 
@@ -1290,15 +1314,17 @@ body {
 
     .main-content {
         margin-top: -300px;
-        &.uni-detail{
+
+        &.uni-detail {
             margin-top: -230px;
-            @media(min-width: 992px){
+            @media(min-width: 992px) {
                 margin-top: -168px;
             }
-            @media(max-width: 991px){
-                margin-top:-50px;
+            @media(max-width: 991px) {
+                margin-top: -50px;
             }
         }
+
         @media(max-width: 1300px) {
             margin-top: -200px;
         }
@@ -1464,72 +1490,82 @@ body {
             padding-bottom: 50px;
             padding-top: 20px;
             border-bottom: 2px solid #E2E2E2;
-            .group-uni-content{
+
+            .group-uni-content {
                 display: flex;
-                @media(max-width: 991px){
+                @media(max-width: 991px) {
                     display: block;
                 }
-                .box-logo-uni{
+
+                .box-logo-uni {
                     width: 150px;
                     height: 150px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     padding: 21px 20px;
-                    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
-                    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
-                    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
-                    @media(max-width: 991px){
+                    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+                    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+                    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+                    @media(max-width: 991px) {
                         display: block;
                         width: 100%;
                         text-align: center;
                         height: auto;
                         box-shadow: none;
                     }
-                    .uni-logo{
+
+                    .uni-logo {
                         display: block;
                         width: 100%;
-                        img{
+
+                        img {
                             width: 100%;
-                            @media(max-width: 991px){
+                            @media(max-width: 991px) {
                                 display: inline-block;
                                 width: 150px;
                             }
                         }
                     }
-                    @media(max-width: 767px){
+
+                    @media(max-width: 767px) {
                         display: block;
                     }
                 }
-                .box-uni-info{
+
+                .box-uni-info {
                     padding-left: 46px;
                     padding-right: 100px;
                     position: relative;
                     flex: 1;
-                    @media(max-width: 991px){
+                    @media(max-width: 991px) {
                         padding-left: 0;
                     }
-                    .nation{
+
+                    .nation {
                         font-size: 12px;
                     }
-                    .uni-rating{
+
+                    .uni-rating {
                         position: absolute;
                         right: 0;
                         top: 0;
                         width: 80px;
-                        @media(max-width: 991px){
+                        @media(max-width: 991px) {
                             width: 50px;
                         }
                     }
-                    .box-video{
+
+                    .box-video {
                         display: flex;
                         border-bottom: 1px solid #E1E1E1;
                         padding-bottom: 25px;
                         margin-top: 36px;
-                        @media(max-width: 991px){
+                        @media(max-width: 991px) {
                             margin-top: 15px;
                         }
-                        .office-video{
+
+                        .office-video {
                             height: 30px;
                             min-width: 140px;
                             background: $brand-color2;
@@ -1539,14 +1575,16 @@ body {
                             text-align: center;
                             line-height: 32px;
                             border-radius: 1.35px;
-                            &.video-play{
+
+                            &.video-play {
                                 margin-left: 20px;
                                 background: #fff;
                                 color: $brand-color2;
                                 border: 1px solid $brand-color2;
                                 position: relative;
                                 padding-left: 20px;
-                                svg{
+
+                                svg {
                                     position: absolute;
                                     left: 20px;
                                     top: 5px;
@@ -1554,7 +1592,8 @@ body {
                                 }
                             }
                         }
-                        .youtube-icon{
+
+                        .youtube-icon {
                             margin-left: 20px;
                             height: 30px;
                             display: inline-block;
@@ -1881,35 +1920,57 @@ body {
                 text-align: justify;
             }
         }
-        .box-school{
+
+        .box-school {
             border-top: 2px solid #E2E2E2;
-            .group-school{
+
+            .group-school {
                 display: flex;
                 flex-wrap: nowrap;
                 margin-top: 20px;
-                .item{
+                @media(max-width: 1199px) {
+                    flex-wrap: wrap;
+                }
+
+                .item {
                     flex: 1;
-                    min-height: 150px;
                     margin-left: 10px;
                     width: 33.33%;
-                    color: #fff;
                     padding: 15px;
-                    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
-                    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
-                    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.25);
-                    &:first-child{
+                    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+                    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+                    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+                    background: $brand-color2;
+                    @media(max-width: 1199px) {
+                        flex: none;
+                        width: calc(33.33% - 10px);
+                        margin-top: 10px;
+                        &:nth-child(4) {
+                            margin-left: 0;
+                        }
+                    }
+                    @media(max-width: 991px) {
+                        flex: none;
+                        width: 100%;
+                        margin-left: 0;
+                        min-height: auto;
+                    }
+
+                    &:first-child {
                         margin-left: 0;
                     }
-                    .number{
+
+                    .number {
                         font-size: 18px;
                         font-weight: bold;
                         display: block;
                         text-align: center;
-                        color: rgba(0,0,0,.8);
+                        color: #fff
                     }
-                    .des{
+
+                    .des {
                         text-align: center;
-                        color: rgba(0,0,0,.8);
+                        color: #fff
                     }
                 }
             }
@@ -2049,29 +2110,33 @@ body {
         }
 
         //university-partners
-        .university-partners{
+        .university-partners {
             margin-top: 20px;
             padding-bottom: 30px;
-            .content-title{
+
+            .content-title {
                 text-align: center;
             }
-            .group-partners{
-                .item-partner{
+
+            .group-partners {
+                .item-partner {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    a{
+
+                    a {
                         display: inline-block;
                         width: 100%;
                         text-align: center;
                         padding: 0 20px;
                         margin-top: 20px;
-                        @media(max-width: 767px){
+                        @media(max-width: 767px) {
                             padding-bottom: 0px 15px;
                         }
-                        img{
+
+                        img {
                             width: 100%;
-                            @media(max-width: 767px){
+                            @media(max-width: 767px) {
                                 width: 80%;
                             }
                         }
@@ -2118,7 +2183,6 @@ body {
                 .multiselect__tags {
                     height: 50px;
                     border-radius: 0;
-                    margin-bottom: 4px;
                     border: 0;
                     margin-left: 20px;
                     @media(max-width: 991px) {
@@ -2251,7 +2315,18 @@ body {
                 }
 
                 .uni-select {
+                    max-width: 100%;
+                    overflow: hidden;
 
+                    summary {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        width: 100%;
+                        display: inline-block;
+                        padding-right: 33px;
+                        max-width: 100%;
+                    }
                 }
 
                 // custome color placeholder
