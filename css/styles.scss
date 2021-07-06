@@ -1552,7 +1552,7 @@ body {
                         top: 0;
                         width: 80px;
                         @media(max-width: 991px) {
-                            width: 50px;
+                            width: 70px;
                         }
                     }
 
@@ -1562,7 +1562,7 @@ body {
                         padding-bottom: 25px;
                         margin-top: 36px;
                         @media(max-width: 991px) {
-                            margin-top: 15px;
+                            margin-top: 28px;
                         }
 
                         .office-video {
@@ -1648,6 +1648,31 @@ body {
                     display: block;
                     margin-top: 30px;
                 }
+
+                .group-percent{
+                    @media(max-width: 991px){
+                        display: flex;
+                        flex-direction: row-reverse;
+                        .box-percent{
+                            .percent{
+                                display: flex;
+                                padding-left: 0;
+                                .ranking-percent{
+                                    margin-top: 0 !important;
+                                }
+                            }
+                        }
+                        .donut{
+                            margin-top: 0 !important;
+                            margin-bottom: 0 !important;
+                        }
+                        .box-progress-dounut{
+                            align-items: center;
+                        }
+                    }
+
+                }
+
 
                 .item-progress {
                     flex: 1 1 auto;
@@ -1981,6 +2006,10 @@ body {
             font-weight: bold;
             margin-top: 88px;
             margin-bottom: 20px;
+            @media(max-width: 991px){
+                margin-top: 20px;
+                font-size: 24px;
+            }
         }
 
         .university-highlight {
@@ -2042,6 +2071,7 @@ body {
                     padding: 14px 0;
                     @media(max-width: 991px) {
                         display: block;
+                        position: relative;
                     }
 
                     .title {
@@ -2056,12 +2086,22 @@ body {
                         flex: 1;
                         @media(max-width: 991px) {
                             margin: 10px 0;
+                            display: inline-block;
+                            position: absolute;
+                            width: 40px;
+                            height: 40px;
+                            right: 0;
+                            top: 17px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
                     }
 
                     .box-bar {
                         flex: 4;
-
+                        padding-right: 60px;
                         .bar {
                             height: 30px;
                             background: #3C4857;
