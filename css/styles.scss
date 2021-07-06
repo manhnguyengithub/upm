@@ -1650,7 +1650,7 @@ body {
                 }
 
                 .group-percent{
-                    @media(max-width: 991px){
+                    //@media(max-width: 991px){
                         display: flex;
                         flex-direction: row-reverse;
                         .box-percent{
@@ -1669,7 +1669,7 @@ body {
                         .box-progress-dounut{
                             align-items: center;
                         }
-                    }
+                    //}
 
                 }
 
@@ -1677,14 +1677,15 @@ body {
                 .item-progress {
                     flex: 1 1 auto;
                     border: 1px solid #E3E3E3;
-                    padding: 10px;
+                    padding: 20px;
                     min-height: 100px;
-                    max-width: 25%;
+                    max-width: 50%;
                     margin-left: 15px;
                     @media(max-width: 991px) {
                         max-width: 100%;
                         margin-left: 0;
                         margin-bottom: 15px;
+                        padding: 10px;
                     }
 
                     &:first-child {
@@ -1695,7 +1696,7 @@ body {
                         font-size: 14px;
                         font-weight: 300;
                         @media(min-width: 992px) {
-                            min-height: 42px;
+                            min-height: 28px;
                         }
                     }
 
@@ -1778,6 +1779,9 @@ body {
                         );
 
                         .donut {
+                            @media(min-width: 1200px){
+                                --donut-size: 130px;
+                            }
                             --donut-size: 110px;
                             --donut-border-width: 10px;
 
@@ -1875,10 +1879,15 @@ body {
                             margin-top: 15px;
 
                             .ranking-name {
-                                font-size: 10px;
+                                font-size: 13px;
                                 font-weight: 300;
                                 padding-left: 20px;
                                 position: relative;
+                                width: 65%;
+                                @media(max-width: 991px){
+                                    font-size: 10px;
+                                    width: auto;
+                                }
 
                                 &:before {
                                     width: 15px;
@@ -2106,7 +2115,6 @@ body {
                             height: 30px;
                             background: #3C4857;
                             position: relative;
-
                             .active-bar {
                                 height: 100%;
                                 background: $brand-color1;
@@ -2130,7 +2138,9 @@ body {
                                 height: 30px;
                                 width: 60px;
                                 background: #fff;
-                                margin-left: calc(100% - 60px);
+                                //margin-left: calc(100% - 60px);
+                                position: absolute;
+                                right: -60px;
 
                                 .total-number {
                                     display: inline-block;

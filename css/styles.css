@@ -1101,32 +1101,32 @@ p {
           .main-detail .main-content .upm-university .group-progress {
             display: block;
             margin-top: 30px; } }
-        @media (max-width: 991px) {
-          .main-detail .main-content .upm-university .group-progress .group-percent {
+        .main-detail .main-content .upm-university .group-progress .group-percent {
+          display: flex;
+          flex-direction: row-reverse; }
+          .main-detail .main-content .upm-university .group-progress .group-percent .box-percent .percent {
             display: flex;
-            flex-direction: row-reverse; }
-            .main-detail .main-content .upm-university .group-progress .group-percent .box-percent .percent {
-              display: flex;
-              padding-left: 0; }
-              .main-detail .main-content .upm-university .group-progress .group-percent .box-percent .percent .ranking-percent {
-                margin-top: 0 !important; }
-            .main-detail .main-content .upm-university .group-progress .group-percent .donut {
-              margin-top: 0 !important;
-              margin-bottom: 0 !important; }
-            .main-detail .main-content .upm-university .group-progress .group-percent .box-progress-dounut {
-              align-items: center; } }
+            padding-left: 0; }
+            .main-detail .main-content .upm-university .group-progress .group-percent .box-percent .percent .ranking-percent {
+              margin-top: 0 !important; }
+          .main-detail .main-content .upm-university .group-progress .group-percent .donut {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important; }
+          .main-detail .main-content .upm-university .group-progress .group-percent .box-progress-dounut {
+            align-items: center; }
         .main-detail .main-content .upm-university .group-progress .item-progress {
           flex: 1 1 auto;
           border: 1px solid #E3E3E3;
-          padding: 10px;
+          padding: 20px;
           min-height: 100px;
-          max-width: 25%;
+          max-width: 50%;
           margin-left: 15px; }
           @media (max-width: 991px) {
             .main-detail .main-content .upm-university .group-progress .item-progress {
               max-width: 100%;
               margin-left: 0;
-              margin-bottom: 15px; } }
+              margin-bottom: 15px;
+              padding: 10px; } }
           .main-detail .main-content .upm-university .group-progress .item-progress:first-child {
             margin-left: 0; }
           .main-detail .main-content .upm-university .group-progress .item-progress .title {
@@ -1134,7 +1134,7 @@ p {
             font-weight: 300; }
             @media (min-width: 992px) {
               .main-detail .main-content .upm-university .group-progress .item-progress .title {
-                min-height: 42px; } }
+                min-height: 28px; } }
           .main-detail .main-content .upm-university .group-progress .item-progress .number {
             font-size: 24px;
             font-size: 400; }
@@ -1583,6 +1583,9 @@ p {
               margin-bottom: 5px;
               position: relative;
               width: var(--donut-size); }
+              @media (min-width: 1200px) {
+                .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut {
+                  --donut-size: 130px; } }
             .main-detail .main-content .upm-university .group-progress .item-progress .box-progress-dounut .donut__slice {
               height: 100%;
               position: absolute;
@@ -1660,10 +1663,15 @@ p {
           .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent {
             margin-top: 15px; }
             .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name {
-              font-size: 10px;
+              font-size: 13px;
               font-weight: 300;
               padding-left: 20px;
-              position: relative; }
+              position: relative;
+              width: 65%; }
+              @media (max-width: 991px) {
+                .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name {
+                  font-size: 10px;
+                  width: auto; } }
               .main-detail .main-content .upm-university .group-progress .item-progress .box-percent .percent .ranking-name:before {
                 width: 15px;
                 height: 15px;
@@ -1839,7 +1847,8 @@ p {
             height: 30px;
             width: 60px;
             background: #fff;
-            margin-left: calc(100% - 60px); }
+            position: absolute;
+            right: -60px; }
             .main-detail .main-content .university-highlight .group-evaluation .item-evaluation .box-bar .bar .box-total .total-number {
               display: inline-block;
               line-height: 30px;
