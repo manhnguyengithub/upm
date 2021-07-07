@@ -199,7 +199,7 @@ p {
           text-transform: uppercase; }
         .banner .header .box-menu .icon-menu {
           position: absolute;
-          right: calc(315px - 100vw);
+          left: calc(100vw - 50px);
           background: transparent;
           cursor: pointer; }
         .banner .header .box-menu .header, .banner .header .box-menu .toggle {
