@@ -2386,7 +2386,6 @@ body {
 
                 .uni-select {
                     max-width: 100%;
-                    overflow: hidden;
 
                     summary {
                         white-space: nowrap;
@@ -3122,6 +3121,20 @@ body {
 
                     &.right-score {
                         text-align: right;
+                    }
+                    @media(min-width: 768px){
+                        &:nth-child(1){
+                            width: 40%;
+                        }
+                        &:nth-child(2){
+                            width: 22%;
+                        }
+                        &:nth-child(3){
+                            width: 18%;
+                        }
+                        &:nth-child(4){
+                            width: 20%;
+                        }
                     }
                 }
 

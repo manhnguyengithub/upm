@@ -2007,8 +2007,7 @@ p {
         display: block;
         cursor: pointer; }
       .main-detail .main-content .university-ranking .box-filter .uni-select {
-        max-width: 100%;
-        overflow: hidden; }
+        max-width: 100%; }
         .main-detail .main-content .university-ranking .box-filter .uni-select summary {
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -2499,6 +2498,15 @@ p {
       font-size: 16px; }
       .group-research-ranking .table-ranking tbody tr td.right-score {
         text-align: right; }
+      @media (min-width: 768px) {
+        .group-research-ranking .table-ranking tbody tr td:nth-child(1) {
+          width: 40%; }
+        .group-research-ranking .table-ranking tbody tr td:nth-child(2) {
+          width: 22%; }
+        .group-research-ranking .table-ranking tbody tr td:nth-child(3) {
+          width: 18%; }
+        .group-research-ranking .table-ranking tbody tr td:nth-child(4) {
+          width: 20%; } }
     .group-research-ranking .table-ranking tbody tr:nth-child(odd) {
       background: #fff; }
     .group-research-ranking .table-ranking tbody tr:nth-child(even) {
